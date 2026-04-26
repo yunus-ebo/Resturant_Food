@@ -1,0 +1,38 @@
+.bannerContainer {
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.bannerImages {
+  display: flex;
+  transition: 0.5s;
+}
+.banner-Img {
+  min-width: 100%;
+}
+.banner-Img img {
+  width: 100%;
+  height: 100%;
+}
+.right-arrow {
+  z-index: 600;
+}
+@media (max-width: 320px) {
+  .bannerContainer {
+    width: 100%;
+  }
+  .banner-icons{
+    display: flex;
+    gap: 2px;
+    color: hsl(0, 0%, 100%);
+  }
+  .right-arrow,
+  .left-arrow {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--iconsColor);
+    border-radius: 50%;
+    margin: 4px 0;
+    padding: 5px;
+  }
+}

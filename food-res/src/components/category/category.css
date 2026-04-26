@@ -1,0 +1,35 @@
+.categoryContainer{
+    margin-top: 20px;
+}
+.categoryContainer h2{
+  text-align: center;
+}
+.categoryContainer .category-btn{
+  text-align: center;
+}
+.category-btn button{
+  font-size: 17px;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: var(--iconsColor);
+  color: hsl(0, 0%, 100%);
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+.category-img img {
+  width: 100%;
+  height: 100px;
+  display: block;
+}
+
+@media (max-width: 320px) {
+    
+}
