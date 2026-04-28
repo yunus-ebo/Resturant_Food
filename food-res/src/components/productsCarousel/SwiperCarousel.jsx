@@ -10,6 +10,7 @@ const SwiperCarousel = () => {
     setSwipSlide((prev) => (prev === swiperImages.length - 1 ? 0 : prev + 1));
   };
   const handlePrevSwip = () => {
+    
     setSwipSlide((prev) => (prev === 0 ? swiperImages.length - 1 : prev - 1));
   };
   return (

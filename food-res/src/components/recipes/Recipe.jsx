@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Recipe = () => {
   return (
     <div className='recipeContainer'>
@@ -7,8 +5,8 @@ const Recipe = () => {
         <div className='recipies'>
            <ul>
             <li>
-                <span>1</span>
-                {/* <img src={} alt="" /> */}
+              <span>1</span>
+              {/* <img src={} alt="" /> */}
             </li>
             <li></li>
             <li></li>
@@ -18,5 +16,4 @@ const Recipe = () => {
     </div>
   )
 }
-
 export default Recipe

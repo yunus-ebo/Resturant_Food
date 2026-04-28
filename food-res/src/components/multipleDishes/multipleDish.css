@@ -1,0 +1,21 @@
+.multipleImages{
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+}
+.multi-wrapper{
+    display: flex;
+}
+.multiple-image{
+    min-width: 33%;
+    height: 80px;
+    border: 1px solid var(--iconsColor);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.multiple-image img{
+    width: 50%;
+    flex-shrink: 0;
+}

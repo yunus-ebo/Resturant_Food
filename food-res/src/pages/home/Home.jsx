@@ -5,8 +5,10 @@ import ProductsCarousel from "../../components/productsCarousel/ProductsCarousel
 import Category from "../../components/category/Category";
 import {carouselImages} from '../../data/tempImgs'
 import Recipe from "../../components/recipes/Recipe";
+import MultipleDishes from "../../components/multipleDishes/MultipleDishes";
 
 const pizza = carouselImages.filter((piz) => piz.isPizza === true)
+const iconsCarousel = carouselImages.filter((icon) => icon.isIcons === true)
 
 const Home = () => {
   useEffect(() => {
@@ -17,8 +19,9 @@ const Home = () => {
       <Banner />
       <div className="homeContainer">
         <ProductsCarousel />
+        <MultipleDishes iconsCarousel={iconsCarousel}/>
         <Category pizza={pizza}/>
-        <Recipe /> 
+        {/* <Recipe /> */}
       </div>
     </>
   );

@@ -12,12 +12,10 @@ const Banner = () => {
   const clickLeftHandler = () => {
     setMoveImg((prev) => (prev === 0 ? productImages.length - 1 : prev - 1));
   };
-
   useEffect(() => {
     const interval = setInterval(clickRightHandler, 5000);
     return () => clearInterval(interval);
   }, [moveImg]);
-
   return (
     <div className="bannerContainer">
       <div

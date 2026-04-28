@@ -10,6 +10,7 @@ import pizza1 from '../assets/images/pizza1.jpg'
 import pizza2 from '../assets/images/pizza2.jpg'
 import pizza3 from '../assets/images/pizza3.jpg'
 import pizza4 from '../assets/images/pizza4.jpg'
+import mainFood from '../assets/images/food-icon.png'
 
 
 export const carouselImages = [
@@ -80,5 +81,35 @@ export const carouselImages = [
         title:"بيتزا 4",
         description:"Lorem ipsum dolor, sit amet consectetur",
         isPizza:true
+    },
+    {
+        id:13,
+        icon:mainFood,
+        title:"طبق رئيسي",
+        isIcons:true
+    },
+    {
+        id:14,
+        icon:mainFood,
+        title:"طبق رئيسي",
+        isIcons:true
+    },
+    {
+        id:15,
+        icon:mainFood,
+        title:"طبق رئيسي",
+        isIcons:true
+    },
+    {
+        id:16,
+        icon:mainFood,
+        title:"طبق رئيسي",
+        isIcons:true
+    },
+    {
+        id:17,
+        icon:mainFood,
+        title:"طبق رئيسي",
+        isIcons:true
     },
 ]

@@ -15,7 +15,7 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
   --sub-text: #16171d;
-  --iconsColor: #c7b694;
+  --iconsColor: #f8b22a;
   --box-sh: #110e1a34;
 }
 :root{
@@ -55,4 +55,5 @@ li{
 }
 .homeContainer{
   padding: 0 20px;
+  overflow-x: hidden;
 }
