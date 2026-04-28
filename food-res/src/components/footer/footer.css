@@ -1,0 +1,20 @@
+footer{
+    background-color: #faebd760;
+    border-top: 1px solid #fbfbf047;
+    margin-top: 20px;
+}
+.footer-topList .main-topList {
+  padding: 0;
+  display: grid;
+  /* grid-template-columns: auto 1fr; */
+  /* flex-wrap: wrap; */
+}
+.footer-topList .main-topList li {
+  list-style: none;
+}
+@media (max-width: 320px) {
+  .footer-topList .main-topList {
+    grid-template-columns: auto 1fr;
+    
+  }
+}

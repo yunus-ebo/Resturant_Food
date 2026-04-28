@@ -15,7 +15,7 @@ function App() {
         <Route path="/reviews" Component={Reviews}/>
         <Route path="/orders" Component={Orders}/>
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
