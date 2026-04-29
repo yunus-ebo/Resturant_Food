@@ -21,9 +21,65 @@
   height: 200px;
 }
 
+.dots_icons {
+  display: flex;
+  justify-content: space-around;
+}
+.dots {
+  position: relative;
+  display: flex;
+  /* gap: 8px; */
+  align-items: center;
+  justify-content: center;
+}
+.dot {
+  /* width: 10px;
+  height: 10px; */
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active {
+  /* background-color: rgb(255, 0, 0); */
+  /* width: 10px;
+  height: 10px; */
+}
+
+/* icons */
+.swiper-icons {
+  display: flex;
+  gap: 2px;
+  color: hsl(0, 0%, 100%);
+}
+.right-swiper,
+.left-swiper {
+  cursor: pointer;
+  background-color: var(--iconsColor);
+  border-radius: 50%;
+}
 /* swiper end */
 
 /* Media Query */
+@media (max-width: 376px) {
+  .right-swiper,
+  .left-swiper {
+    font-size: 20px;
+    margin: 4px 0;
+    padding: 5px;
+  }
+  .dots {
+    gap: 8px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  .dot.active {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 @media (max-width: 320px) {
   .carouselContainer {
     grid-template-columns: 1fr;
@@ -36,25 +92,25 @@
   }
 
   /* dots */
-  .dots_icons{
+  .dots_icons {
     display: flex;
     justify-content: space-around;
   }
-  .dots{
+  .dots {
     position: relative;
     display: flex;
     gap: 8px;
     align-items: center;
     justify-content: center;
   }
-  .dot{
+  .dot {
     width: 10px;
     height: 10px;
     background-color: #ccc;
     border-radius: 50%;
     cursor: pointer;
   }
-  .dot.active{
+  .dot.active {
     /* background-color: rgb(255, 0, 0); */
     width: 10px;
     height: 10px;

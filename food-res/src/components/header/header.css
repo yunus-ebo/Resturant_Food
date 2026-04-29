@@ -139,13 +139,7 @@ nav .navbar li {
     display: none !important;
   }
 }
-@media (max-width: 320px) {
-  .top-header {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "leftSection leftSection leftSection"
-      "menuBar middleSection rightSection";
-  }
+@media (max-width: 376px) {
   .top-leftSection {
     display: flex !important;
     flex-direction: column;
@@ -169,6 +163,40 @@ nav .navbar li {
     padding: 10px 20px;
     font-size: 20px;
     cursor: pointer;
+  }
+  nav {
+    padding: 1px 0;
+  }
+  nav .navbar li {
+    margin: 0 4px;
+  }
+  .navbar li .nav-link {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .top-header {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "leftSection leftSection leftSection"
+      "menuBar middleSection rightSection";
+  }
+  .top-leftSection {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 100vh;
+    transform: translateX(100%);
+    background-color: #d6a645;
+    z-index: 1000;
+  }
+  .top-leftSection.open {
+    transform: translateX(0);
+    transition: 0.3s ease-in-out;
   }
   .top-leftSection li::after {
     height: 0;
