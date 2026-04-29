@@ -25,17 +25,17 @@ const Header = () => {
           <div className="icon-closeLeft" onClick={() => setToggle(false)}>
             <i class="bx bx-x-circle" />
           </div>
-          <li>
+          <li onClick={() => setToggle(false)}>
             <Link className="header-link" to={"/orders"}>
               طلباتك
             </Link>
           </li>
-          <li>
+          <li onClick={() => setToggle(false)}>
             <Link className="header-link" to={"/reviews"}>
               المراجعات
             </Link>
           </li>
-          <li>
+          <li onClick={() => setToggle(false)}>
             <Link className="header-link" to={"/contactUs"}>
               تواصل معنا
             </Link>

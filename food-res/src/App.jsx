@@ -5,15 +5,17 @@ import Footer from "./components/footer/Footer";
 import Orders from "./pages/orders/Orders";
 import ContactUS from './pages/contactUs/ContactUS'
 import Reviews from './pages/reviews/Reviews'
+import CategoryPage from "./pages/category/CategoryPage";
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" Component={Home} />
-        <Route path="/contactUs" Component={ContactUS}/>
-        <Route path="/reviews" Component={Reviews}/>
-        <Route path="/orders" Component={Orders}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/:category" element={<CategoryPage />} />
+        <Route path="/contactUs" element={<ContactUS />}/>
+        <Route path="/reviews" element={<Reviews />}/>
+        <Route path="/orders" element={<Orders />}/>
       </Routes>
       <Footer />
     </>

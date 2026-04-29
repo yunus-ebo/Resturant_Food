@@ -94,8 +94,14 @@ nav .close {
 nav .navbar {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
   padding: 0;
+  text-decoration: none;
+  color: var(--sub-text);
+  font-family: var(--fontFamily-Changa);
+}
+nav .navbar:hover{
+  color: var(--iconsColor);
 }
 nav .navbar li {
   margin: 0 20px;
@@ -103,7 +109,6 @@ nav .navbar li {
 .navbar li .nav-link {
   text-decoration: none;
   color: var(--sub-text);
-  font-family: var(--fontFamily-Changa);
 }
 
 /* Media Query */
@@ -123,6 +128,7 @@ nav .navbar li {
     display: flex;
   }
 }
+
 @media (max-width: 426px) {
   .top-header {
     padding: 5px 20px;
@@ -134,14 +140,10 @@ nav .navbar li {
   .top-middleSection img {
     width: 150px;
   }
+  /* !important: is important so without it {display:none} won't work because of {display:flex} and this is stronger than none */
+  /* display: none !important; */
   .top-leftSection {
-    /* !important: is important so without it {display:none} won't work because of {display:flex} and this is stronger than none */
-    display: none !important;
-  }
-}
-@media (max-width: 426px) {
-  .top-leftSection {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -169,6 +171,12 @@ nav .navbar li {
   }
   nav {
     padding: 1px 0;
+  }
+  nav .navbar {
+    font-size: 14px;
+    row-gap: 8px;
+
+    margin: 8px 0;
   }
   nav .navbar li {
     margin: 0 6px;

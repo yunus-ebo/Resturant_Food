@@ -1,18 +1,19 @@
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import { navLinks } from "../../data/navLinks";
 const Navbar = () => {
   return (
     <nav>
-      <div className='close'>
+      <div className="close">
         <i className="bx bx-x-circle close-icon" />
       </div>
-      <ul className='navbar'>
-        <li><Link className='nav-link' to={"/"}> الصفحة الرئيسية </Link></li>
-        <li><Link className='nav-link' > أكل شرقي </Link></li>
-        <li><Link className='nav-link' > أكل غربي </Link></li>
-        <li><Link className='nav-link' > مقبلات </Link></li>
-        <li><Link className='nav-link' > مشروبات </Link></li>
+      <ul className="navbar">
+        {navLinks.map((item) => (
+          <li key={item.slug}>
+            <Link className="navbar" to={`${item.slug}`}>{item.label}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
