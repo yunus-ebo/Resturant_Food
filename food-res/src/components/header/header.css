@@ -139,7 +139,7 @@ nav .navbar li {
     display: none !important;
   }
 }
-@media (max-width: 376px) {
+@media (max-width: 426px) {
   .top-leftSection {
     display: flex !important;
     flex-direction: column;
@@ -164,9 +164,23 @@ nav .navbar li {
     font-size: 20px;
     cursor: pointer;
   }
+  .top-leftSection li::after {
+    height: 0;
+  }
   nav {
     padding: 1px 0;
   }
+  nav .navbar li {
+    margin: 0 6px;
+  }
+  .navbar li .nav-link {
+    font-size: 14px;
+  }
+  .top-header .top-rightSection div {
+    margin-left: 5px;
+  }
+}
+@media (max-width: 376px) {
   nav .navbar li {
     margin: 0 4px;
   }
@@ -181,36 +195,5 @@ nav .navbar li {
     grid-template-areas:
       "leftSection leftSection leftSection"
       "menuBar middleSection rightSection";
-  }
-  .top-leftSection {
-    display: flex !important;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    min-height: 100vh;
-    transform: translateX(100%);
-    background-color: #d6a645;
-    z-index: 1000;
-  }
-  .top-leftSection.open {
-    transform: translateX(0);
-    transition: 0.3s ease-in-out;
-  }
-  .top-leftSection li::after {
-    height: 0;
-  }
-  .top-header .top-rightSection div {
-    margin-left: 5px;
-  }
-  nav {
-    padding: 1px 0;
-  }
-  nav .navbar li {
-    margin: 0 4px;
-  }
-  .navbar li .nav-link {
-    font-size: 12px;
   }
 }

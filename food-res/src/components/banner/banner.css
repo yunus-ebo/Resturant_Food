@@ -28,17 +28,22 @@
 .right-arrow {
   z-index: 600;
 }
-
-@media (max-width: 376px) {
+@media (max-width: 426px){
   .bannerContainer {
     width: 100%;
   }
   .right-arrow,
   .left-arrow {
-    font-size: 20px;
+    font-size: 21px;
     margin: 4px 0;
     padding: 5px;
   }
+}
+@media (max-width: 376px) {
+  .right-arrow,
+  .left-arrow {
+    font-size: 20px;
+    }
 }
 
 @media (max-width: 320px) {

@@ -60,6 +60,25 @@
 /* swiper end */
 
 /* Media Query */
+@media (max-width: 426px){
+  .right-swiper,
+  .left-swiper {
+    font-size: 21px;
+    margin: 4px 0;
+    padding: 5px;
+  }
+  .dots {
+    gap: 10px;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+  .dot.active {
+    width: 10px;
+    height: 10px;
+  }
+}
 @media (max-width: 376px) {
   .right-swiper,
   .left-swiper {
