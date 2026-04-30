@@ -8,7 +8,10 @@ const Navbar = () => {
       </div>
       <ul className="navbar-ul">
         {navLinks.map((item) => (
-          <li key={item.slug}>
+          <li
+           key={item.slug}
+          //  className={item.noBorder ? "no-border" : ""}
+          >
             <Link className="nav-link" to={`${item.slug}`}>{item.label}</Link>
           </li>
         ))}

@@ -9,7 +9,7 @@ import img8 from '../assets/images/pizza4.jpg'
 import img9 from '../assets/images/pizza1.jpg'
 
 export const navLinks = [
-    {slug:"",label:"الصفحة الرئيسية"},
+    {slug:"",label:"الصفحة الرئيسية",noBorder:true},
     {slug:"western-meals",label:"وجبات غربية",images:[
         {id:1,title:"Lorem ipsum dolor sit amet.",image:img1},
         {id:2,title:"Lorem ipsum dolor sit amet.",image:img2},
@@ -23,7 +23,7 @@ export const navLinks = [
     ]},
     {slug:"seafood",label:"مأكولات بحرية"},
     {slug:"grill-food",label:"مشاوي"},
-    {slug:"pottery",label:"فخارات"},
+    {slug:"pottery",label:"فخارات",noBorder:true},
     {slug:"pizza",label:"بيتزا"},
     {slug:"cold-snacks",label:"مقبلات باردة"},
     {slug:"hot-snacks",label:"مقبلات ساخنة"},

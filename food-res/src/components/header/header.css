@@ -109,20 +109,21 @@ nav .close {
 nav .navbar-ul {
   display: flex;
   justify-content: center;
+  /* use gap with flex-wrap */
   flex-wrap: wrap;
+  gap: 5px 3px;
   padding: 0;
   margin: 8px 0;
   text-decoration: none;
   font-family: var(--fontFamily-Changa);
 }
-nav .navbar-ul li {
-  margin: 0 20px;
-}
+
 nav .navbar-ul li :hover{
   color: var(--iconsColor);
 }
 .navbar-ul li .nav-link {
   text-decoration: none;
+  padding-right: 2px;
   color: var(--sub-text);
 }
 
@@ -188,7 +189,7 @@ nav .navbar-ul li :hover{
     margin: 0 3px;
   }
   .navbar-ul li .nav-link {
-    font-size: 14px;
+    font-size: 13px;
   }
   .top-header .top-rightSection div {
     margin-left: 5px;
