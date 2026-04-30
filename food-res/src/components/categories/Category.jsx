@@ -17,7 +17,7 @@ const Category = ({ pizza }) => {
         ))}
       </div>
       <div className="category-btn">
-        <button> حزمة أطباق بيتزا <i class="bi bi-arrow-left"></i> </button>
+         حزمة أطباق بيتزا <i class="bi bi-arrow-left"></i> 
       </div>
     </div>
   );

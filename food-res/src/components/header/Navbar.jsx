@@ -6,10 +6,10 @@ const Navbar = () => {
       <div className="close">
         <i className="bx bx-x-circle close-icon" />
       </div>
-      <ul className="navbar">
+      <ul className="navbar-ul">
         {navLinks.map((item) => (
           <li key={item.slug}>
-            <Link className="navbar" to={`${item.slug}`}>{item.label}</Link>
+            <Link className="nav-link" to={`${item.slug}`}>{item.label}</Link>
           </li>
         ))}
       </ul>

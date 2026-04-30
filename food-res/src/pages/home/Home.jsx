@@ -2,7 +2,7 @@ import Banner from "../../components/banner/Banner";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProductsCarousel from "../../components/productsCarousel/ProductsCarousel";
-import Category from "../../components/category/Category";
+import Category from "../../components/categories/Category";
 import {carouselImages} from '../../data/tempImgs'
 import Recipe from "../../components/recipes/Recipe";
 import MultipleDishes from "../../components/multipleDishes/MultipleDishes";
@@ -26,5 +26,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;
