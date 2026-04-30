@@ -96,7 +96,6 @@ header::before{
 }
 /* Navbar section */
 nav {
-  
   padding:  0;
   z-index: 700;
 }
@@ -112,7 +111,7 @@ nav .navbar-ul {
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
-  margin-bottom: 8px;
+  margin: 8px 0;
   text-decoration: none;
   font-family: var(--fontFamily-Changa);
 }
@@ -145,7 +144,7 @@ nav .navbar-ul li :hover{
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 380px) {
   .top-header {
     padding: 5px 20px;
   }
@@ -185,11 +184,8 @@ nav .navbar-ul li :hover{
   .top-leftSection li::after {
     height: 0;
   }
-  nav .navbar-ul {
-    font-size: 14px;
-  }
   nav .navbar-ul li {
-    margin: 0 6px;
+    margin: 0 3px;
   }
   .navbar-ul li .nav-link {
     font-size: 14px;
@@ -199,9 +195,6 @@ nav .navbar-ul li :hover{
   }
 }
 @media (max-width: 376px) {
-  nav .navbar-ul li {
-    margin: 0 4px;
-  }
   .navbar-ul li .nav-link {
     font-size: 12px;
   }
