@@ -144,7 +144,7 @@ nav .navbar-ul li :hover{
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 386px) {
   .top-header {
     padding: 5px 20px;
   }
