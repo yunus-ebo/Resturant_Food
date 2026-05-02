@@ -1,10 +1,9 @@
 import "./banner.css";
-import { carouselImages } from "../../data/tempImgs";
 import { useEffect, useState } from "react";
-const Banner = () => {
-  const [moveImg, setMoveImg] = useState(0);
 
-  const productImages = carouselImages.filter(product => product.isProduct === true)
+
+const Banner = ({ productImages }) => {
+  const [moveImg, setMoveImg] = useState(0);
 
   const clickRightHandler = () => {
     setMoveImg((prev) => (prev === productImages.length - 1 ? 0 : prev + 1));
@@ -25,9 +24,9 @@ const Banner = () => {
         className="bannerImages"
       >
         {productImages.map((caro) => (
-          <div className="banner-Img">
-            <img src={caro.caros} alt="" />
-          </div>
+            <div className="banner-Img">
+              <img src={caro.caros} alt="" />
+            </div>
         ))}
       </div>
       <div className="banner-icons">

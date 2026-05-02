@@ -1,18 +1,18 @@
 {
-    "resturantProducts": [
+    "products": [
         {
         "id":1,
-        "caros":"caroImg1",
+        "caros":"./src/assets/images/pizza1.jpg",
         "isProduct":true
     },
     {
         "id":2,
-        "caros":"caroImg2",
+        "caros":"./src/assets/images/pizza2.jpg",
         "isProduct":true
     },
     {
         "id":3,
-        "caros":"caroImg3",
+        "caros":"./src/assets/images/pizza3.jpg",
         "isProduct":true
     },
     {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { carouselImages } from "../../data/tempImgs";
+import { Link } from "react-router-dom";
 const SwiperCarousel = () => {
   const swiperImages = carouselImages.filter(
     (swipCaro) => swipCaro.isSwiper === true,
@@ -20,10 +21,12 @@ const SwiperCarousel = () => {
           transform: `translateX(+${swipSlide * 100}%)`,
         }}
       >
-        {swiperImages.map((caro) => (
-          <div key={caro.id} className="swiperSlide">
-            <img src={caro.caros} alt="" />
-          </div>
+        {swiperImages.map((swip) => (
+          <Link className="swiperSlide" to={`/singleProduct/${swip.id}`}>
+            <div key={swip.id}>
+              <img src={swip.caros} alt="" />
+            </div>
+          </Link>
         ))}
       </div>
       <div className="dots_icons">

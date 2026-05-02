@@ -9,11 +9,10 @@
   overflow: hidden;
 }
 .swiperslider {
-  display: flex;
   transition: 0.5s;
+  display: flex;
 }
-
-.swiperSlide {
+.swiperSlide{
   min-width: 100%;
 }
 .swiperSlide img {

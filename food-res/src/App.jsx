@@ -6,6 +6,7 @@ import Orders from "./pages/orders/Orders";
 import ContactUS from './pages/contactUs/ContactUS'
 import Reviews from './pages/reviews/Reviews'
 import CategoryPage from "./pages/category/CategoryPage";
+import SingleProduct from './pages/singleProduct/SingleProduct'
 function App() {
   return (
     <>
@@ -16,8 +17,9 @@ function App() {
         <Route path="/contactUs" element={<ContactUS />}/>
         <Route path="/reviews" element={<Reviews />}/>
         <Route path="/orders" element={<Orders />}/>
+        <Route path="/singleProduct/:id" element={<SingleProduct />}/>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
