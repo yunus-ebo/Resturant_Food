@@ -1,0 +1,12 @@
+.mealsContainer{
+
+}
+.meals-item{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    flex-wrap: wrap;
+}
+.meal-img img{
+    width: 100px;
+    height: 80px;
+}

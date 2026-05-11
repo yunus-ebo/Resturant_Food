@@ -1,49 +1,75 @@
-footer{
-    background-color: #faebd760;
-    margin-top: 20px;
-    position: relative;
+footer {
+  background-color: #faebd760;
+  margin-top: 20px;
+  position: relative;
 }
-footer::before{
-  content: '';
+footer::before {
+  content: "";
   position: absolute;
   top: 0;
   height: 2px;
   width: 100%;
-  background: linear-gradient(180deg,#fef8f8,#faebd760);
+  background: linear-gradient(180deg, #fef8f8, #faebd760);
 }
-.footer-topList .main-topList {
+.footer-topList .order-topList {
   padding: 0;
   display: grid;
   /* grid-template-columns: auto 1fr; */
   /* flex-wrap: wrap; */
 }
-.footer-topList .main-topList li {
+.footer-topList .order-topList li {
   list-style: none;
+  margin-bottom: 10px;
+  font-size: large;
+  font-family: var(--fontFamily-Messiri);
 }
-
-.bottom-footer{
-  background-color: #0d6efd;
-  /* background-color: #544141; */
+.footer-middleList {
+  display: flex;
+  flex-direction: column;
+}
+.middle-title {
+  text-align: center;
+  font-size: 27px;
+  font-family: var(--fontFamily-Tajawal);
+}
+.footer-middleList .order-middleList {
+  padding: 0;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, auto);
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.footer-middleList .order-middleList .middle-lists {
+  padding: 8px 0;
+}
+.footer-middleList .order-middleList .middle-lists a {
+  text-decoration: none;
+}
+.bottom-footer {
+  background-color: var(--footer-back);
   color: #fff;
   position: relative;
 }
-.bottom-footer::before{
-  content: '';
+.bottom-footer p {
+  padding: 12px 0;
+  text-align: center;
+}
+.bottom-footer::before {
+  content: "";
   position: absolute;
   top: 0;
   height: 2px;
   width: 100%;
-  background: linear-gradient(180deg,#eef1f6, #0d6efd);
+  background: linear-gradient(180deg, #eef1f6, var(--footer-back));
 }
-@media (max-width: 426px) {
-  .footer-topList .main-topList {
+@media (max-width: 386px) {
+  .footer-topList .order-topList {
     grid-template-columns: 1fr 1fr;
-    
   }
 }
 @media (max-width: 320px) {
-  .footer-topList .main-topList {
+  .footer-topList .order-topList {
     grid-template-columns: auto 1fr;
-    
   }
 }

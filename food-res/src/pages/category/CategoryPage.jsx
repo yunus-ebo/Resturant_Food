@@ -1,6 +1,6 @@
 import "./category.css";
 import { useParams } from "react-router-dom";
-import { navLinks } from "../../data/navLinks";
+import { navLinks } from "../../data/dataLinks";
 const CategoryPage = () => {
   const { category } = useParams();
   const current = navLinks.find((curr) => curr.slug === category); // don't do redux for this

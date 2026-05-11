@@ -47,14 +47,12 @@
 /* icons */
 .swiper-icons {
   display: flex;
-  gap: 2px;
-  color: hsl(0, 0%, 100%);
+  gap: 6px;
 }
 .right-swiper,
 .left-swiper {
   cursor: pointer;
   background-color: var(--iconsColor);
-  border-radius: 50%;
 }
 /* swiper end */
 

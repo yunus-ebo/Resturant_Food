@@ -30,10 +30,10 @@ const Banner = ({ productImages }) => {
         ))}
       </div>
       <div className="banner-icons">
-        <div onClick={clickRightHandler} className="right-arrow">
+        <div onClick={clickLeftHandler} className="right-arrow">
           <i class="bi bi-arrow-right-short"></i>
         </div>
-        <div onClick={clickLeftHandler} className="left-arrow">
+        <div onClick={clickRightHandler} className="left-arrow">
           <i class="bi bi-arrow-left-short"></i>
         </div>
       </div>

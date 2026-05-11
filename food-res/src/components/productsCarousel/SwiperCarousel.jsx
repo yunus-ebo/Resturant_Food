@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { carouselImages } from "../../data/tempImgs";
 import { Link } from "react-router-dom";
-const SwiperCarousel = () => {
-  const swiperImages = carouselImages.filter(
+const SwiperCarousel = ({carouselImgs}) => {
+  const swiperImages = carouselImgs.filter(
     (swipCaro) => swipCaro.isSwiper === true,
   );
   const [swipSlide, setSwipSlide] = useState(0);
@@ -31,10 +30,10 @@ const SwiperCarousel = () => {
       </div>
       <div className="dots_icons">
         <div className="swiper-icons">
-          <div onClick={handleNextSwip} className="right-swiper">
+          <div onClick={handlePrevSwip} className="right-swiper">
             <i class="bi bi-arrow-right-short"></i>
           </div>
-          <div onClick={handlePrevSwip} className="left-swiper">
+          <div onClick={handleNextSwip} className="left-swiper">
             <i class="bi bi-arrow-left-short"></i>
           </div>
         </div>

@@ -31,8 +31,8 @@ const Header = () => {
             </Link>
           </li>
           <li onClick={() => setToggle(false)}>
-            <Link className="header-link" to={"/reviews"}>
-              المراجعات
+            <Link className="header-link" to={"/kitchen"}>
+              المطبخ
             </Link>
           </li>
           <li onClick={() => setToggle(false)}>

@@ -17,27 +17,62 @@
     },
     {
         "id":4,
-        "caros":"caroImg4",
+        "caros":"../src/assets/images/grill1.jpg",
+        "caroImages":[
+            "../src/assets/images/grill1.jpg",
+            "../src/assets/images/pizza1.jpg",
+            "../src/assets/images/pizza2.jpg",
+            "../src/assets/images/pizza3.jpg"
+        ],
+        "description":"صحن مشاوي مشكل مع سرفيس كامل وبسعر مناسب",
         "isSwiper":true
     },
     {
         "id":5,
-        "caros":"caroImg5",
+        "caros":"../src/assets/images/grill1.jpg",
+        "caroImages":[
+            "../src/assets/images/grill1.jpg",
+            "../src/assets/images/pizza1.jpg",
+            "../src/assets/images/pizza2.jpg",
+            "../src/assets/images/pizza3.jpg"
+        ],
+        "description":"",
         "isSwiper":true
     },
     {
         "id":6,
-        "caros":"caroImg6",
+        "caros":"../src/assets/images/grill1.jpg",
+        "caroImages":[
+            "../src/assets/images/grill1.jpg",
+            "../src/assets/images/pizza1.jpg",
+            "../src/assets/images/pizza2.jpg",
+            "../src/assets/images/pizza3.jpg"
+        ],
+        "description":"",
         "isSwiper":true
     },
     {
         "id":7,
-        "caros":"caroImg7",
+        "caros":"../src/assets/images/grill1.jpg",
+        "caroImages":[
+            "../src/assets/images/grill1.jpg",
+            "../src/assets/images/pizza1.jpg",
+            "../src/assets/images/pizza2.jpg",
+            "../src/assets/images/pizza3.jpg"
+        ],
+        "description":"",
         "isSwiper":true
     },
     {
         "id":8,
-        "caros":"caroImg8",
+        "caros":"../src/assets/images/grill1.jpg",
+        "caroImages":[
+            "../src/assets/images/grill1.jpg",
+            "../src/assets/images/pizza1.jpg",
+            "../src/assets/images/pizza2.jpg",
+            "../src/assets/images/pizza3.jpg"
+        ],
+        "description":"",
         "isSwiper":true
     },
     {
@@ -45,6 +80,7 @@
         "caros":"pizza1",
         "title":"بيتزا 1",
         "description":"Lorem ipsum dolor, sit amet consectetur",
+        "pizImage":"../src/assets/images/pizza1.jpg",
         "isPizza":true
     },
     {
@@ -52,6 +88,7 @@
         "caros":"pizza2",
         "title":"بيتزا 2",
         "description":"Lorem ipsum dolor, sit amet consectetur",
+        "pizImage":"../src/assets/images/pizza2.jpg",
         "isPizza":true
     },
     {
@@ -59,6 +96,7 @@
         "caros":"pizza3",
         "title":"بيتزا 3",
         "description":"Lorem ipsum dolor, sit amet consectetur",
+        "pizImage":"../src/assets/images/pizza3.jpg",
         "isPizza":true
     },
     {
@@ -66,19 +104,24 @@
         "caros":"pizza4",
         "title":"بيتزا 4",
         "description":"Lorem ipsum dolor, sit amet consectetur",
+        "pizImage":"../src/assets/images/pizza4.jpg",
         "isPizza":true
     },
     {
         "id":13,
-        "icon":"mainFood",
-        "title":"طبق رئيسي",
-        "isIcons":true
+        "caros":"pizza4",
+        "title":"بيتزا 4",
+        "description":"Lorem ipsum dolor, sit amet consectetur",
+        "pizImage":"../src/assets/images/pizza2.jpg",
+        "isPizza":true
     },
     {
         "id":14,
-        "icon":"mainFood",
-        "title":"طبق رئيسي",
-        "isIcons":true
+        "caros":"pizza4",
+        "title":"بيتزا 4",
+        "description":"Lorem ipsum dolor, sit amet consectetur",
+        "pizImage":"../src/assets/images/pizza3.jpg",
+        "isPizza":true
     },
     {
         "id":15,
@@ -97,6 +140,64 @@
         "icon":"mainFood",
         "title":"طبق رئيسي",
         "isIcons":true
+    },
+    {
+        "id":18,
+        "icon":"mainFood",
+        "title":"طبق رئيسي",
+        "isIcons":true
+    },
+    {
+        "id":19,
+        "icon":"mainFood",
+        "title":"طبق رئيسي",
+        "isIcons":true
+    },
+    {
+        "id":20,
+        "offerImage":"../src/assets/images/kunafa.jpg",
+        "type":"كنافة",
+        "description":"كنافة على الفحم:\n طريقة عمل الكنافة...",
+        "price":90,
+        "discount":20,
+        "isOffer":true,
+        "hasRadius":true
+    },
+    {
+        "id":21,
+        "offerImage":"../src/assets/images/kunafa.jpg",
+        "type":"حلاوة الجبن",
+        "description":"كنافة على الفحم:\n طريقة عمل الكنافة...",
+        "price":90,
+        "discount":20,
+        "isOffer":true
+    },
+    {
+        "id":22,
+        "offerImage":"../src/assets/images/kunafa.jpg",
+        "type":"كنافة",
+        "description":"طريقة عمل الكنافة",
+        "price":90,
+        "discount":20,
+        "isOffer":true
+    },
+    {
+        "id":23,
+        "offerImage":"../src/assets/images/kunafa.jpg",
+        "type":"كنافة",
+        "description":"طريقة عمل الكنافة",
+        "price":90,
+        "discount":20,
+        "isOffer":true
+    },
+    {
+        "id":24,
+        "offerImage":"../src/assets/images/kunafa.jpg",
+        "type":"كنافة",
+        "description":"طريقة عمل الكنافة",
+        "price":90,
+        "discount":20,
+        "isOffer":true
     }
     ]
 }

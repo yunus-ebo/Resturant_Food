@@ -167,7 +167,7 @@ nav .navbar-ul li :hover{
     left: 0;
     min-height: 100vh;
     transform: translateX(100%);
-    background-color: #d6a645;
+    background-color: var(--sidebar-backColor);
     z-index: 1000;
   }
   .top-leftSection.open {

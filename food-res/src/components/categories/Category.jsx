@@ -1,24 +1,22 @@
 import "./category.css";
-const Category = ({ pizza }) => {
+const Category = ({ pizzaItems }) => {
   return (
     <div className="categoryContainer">
-      <h2> أطباقنا الشهية </h2>
+      <h2 className="category-title"> أطباقنا الشهية </h2>
       <div className="categories">
-        {pizza.map((pizz) => (
+        {pizzaItems.map((pizza) => (
           <div className="category-things">
             <div className="category-img">
-              <img src={pizz.caros} alt="" />
+              <img src={pizza.pizImage} alt="" />
             </div>
-            <div className="category-title">
-              <h3>{pizz.title}</h3>
-              <p>{pizz.description}</p>
+            <div>
+              <h3>{pizza.title}</h3>
+              <p>{pizza.description}</p>
             </div>
           </div>
         ))}
       </div>
-      <div className="category-btn">
-         حزمة أطباق بيتزا <i class="bi bi-arrow-left"></i> 
-      </div>
+      <div className="overlay"></div>
     </div>
   );
 };

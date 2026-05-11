@@ -1,9 +1,39 @@
-import React from 'react'
+import "./singlePro.css";
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { fetchProductById } from "../../redux/apiCalls/productApiCall";
 
 const SingleProduct = () => {
-  return (
-    <div>SingleProduct</div>
-  )
-}
+  const dispatch = useDispatch();
+  const { productItem } = useSelector((state) => state.product);
+  const { id } = useParams();
 
-export default SingleProduct
+  const [imageIndex, setImageIndex] = useState(0);
+
+  useEffect(() => {
+    dispatch(fetchProductById(id));
+    window.scrollTo(0,0)
+  }, [id]);
+  return (
+    <div className="singleProductContainer">
+      <div className="single-img">
+        <img src={productItem?.caroImages[imageIndex]} alt="" />
+      </div>
+      <div className="single-different-imgs">
+        {productItem?.caroImages.map((source, index) => (
+          <div className="single-img-span">
+            <img
+              key={index}
+              src={source}
+              onClick={() => setImageIndex(index)}
+            />
+            <p>انقر لترى الصورة كاملة</p>
+          </div>
+        ))}
+      </div>
+      <p className="descrip">{productItem?.description}</p>
+    </div>
+  );
+};
+export default SingleProduct;

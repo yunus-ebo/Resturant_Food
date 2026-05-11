@@ -3,7 +3,7 @@ import SwiperCarousel from "./SwiperCarousel";
 
 
 
-const ProductsCarousel = () => {
+const ProductsCarousel = ({carouselImgs}) => {
   
   return (
     <div className="carouselContainer">
@@ -13,7 +13,7 @@ const ProductsCarousel = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           Amet,placeat.
         </p>
-        <SwiperCarousel />
+        <SwiperCarousel carouselImgs={carouselImgs}/>
       </div>
     </div>
   );

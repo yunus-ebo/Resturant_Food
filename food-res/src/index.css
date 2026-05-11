@@ -16,11 +16,20 @@
   --mono: ui-monospace, Consolas, monospace;
   --sub-text: #16171d;
   --iconsColor: #f8b22a;
+  --subTitle-color: #996e46;
+  --border-color: #fde3af;
+  --overlay-back: #fff9ee;
+  --sidebar-backColor: #fcfaf2;
   --box-sh: #110e1a34;
+  --footer-back: #101722;
 }
 :root{
   --fontFamily-Changa: "Changa", sans-serif;
   --fontFamily-amiri: "Amiri", serif;
+  --fontFamily-Noto-Kufi: "Noto Kufi Arabic", sans-serif;
+  --fontFamily-Playpen-SansArabic: "Noto Kufi Arabic", sans-serif;
+  --fontFamily-Tajawal: "Tajawal", sans-serif;
+  --fontFamily-Messiri: "El Messiri", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,9 +43,7 @@
     --accent-bg: rgba(192, 132, 252, 0.15);
     --accent-border: rgba(192, 132, 252, 0.5);
     --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+    }
 }
 
 body {
