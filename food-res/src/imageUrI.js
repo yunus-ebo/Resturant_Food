@@ -1,3 +1,3 @@
 export const imageUrI = (path) => {
-    return `https://backend-resturant-food-1.onrender.com/${path}`;
+    return `${import.meta.env.VITE_API_URI}/${path}`;
 }
