@@ -26,7 +26,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 2,
@@ -39,7 +39,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 3,
@@ -52,7 +52,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 5,
@@ -78,7 +78,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 6,
@@ -91,7 +91,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 7,
@@ -104,7 +104,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 8,
@@ -117,7 +117,7 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
   {
     id: 9,
@@ -130,6 +130,6 @@ export const carouselImages = [
       { id: 3, label: "Lorem ipsum dolor sit amet.", mealImage: img3 },
       { id: 4, label: "Lorem ipsum dolor sit amet.", mealImage: img4 },
     ],
-    isIcons: true,
+    category: "icon",
   },
 ];

@@ -11,8 +11,7 @@ import { fetchProducts } from "../../redux/apiCalls/productApiCall";
 import Candies from "../../components/candies/Candies";
 import Offers from "../../components/offers/Offers";
 
-const pizza = carouselImages.filter((piz) => piz.isPizza === true)
-const iconsCarousel = carouselImages.filter((icon) => icon.isIcons === true)
+const iconsCarousel = carouselImages.filter((icon) => icon.category === "icon")
 
 const Home = () => {
   const dispatch = useDispatch();
