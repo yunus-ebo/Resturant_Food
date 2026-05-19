@@ -16,6 +16,7 @@ const Banner = ({ productImages }) => {
     const interval = setInterval(clickRightHandler, 5000);
     return () => clearInterval(interval);
   }, [moveImg]);
+
   return (
     <div className="bannerContainer">
       <div
