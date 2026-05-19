@@ -3,11 +3,11 @@ import singleBanner from '../../assets/images/kabab.png'
 import { useEffect } from "react";
 import {useDispatch,useSelector } from 'react-redux'
 import {fetchProducts} from '../../redux/apiCalls/productApiCall'
+import { imageUrI } from '../../imageUrI';
 const BannerPage = () => {
 
   const dispatch = useDispatch();
   const {productItem} = useSelector(state => state.product);
-
 
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const BannerPage = () => {
   return(
      <div>
         <div className="singleBanner-img">
-          <img src={singleBanner} alt="" />
+          <img src={imageUrI(singleBanner)} alt="" />
           <span>hello world</span>
         </div>
      </div>

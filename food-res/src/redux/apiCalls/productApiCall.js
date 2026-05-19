@@ -4,8 +4,7 @@ export function fetchProducts() {
   return async (dispatch) => {
     try {
       // const response = await fetch("http://localhost:5001/products");
-      // const response = await fetch(`${import.meta.env.VITE_API_URI}/api/products`);
-      const response = await fetch("https://backend-resturant-food-1.onrender.com/api/products");
+      const response = await fetch(`${import.meta.env.VITE_API_URI}/api/products`);
       const data = await response.json();
       dispatch(productAction.setProducts(data));
     } catch (error) {
@@ -18,8 +17,7 @@ export function fetchProductById(byId){
   return async (dispatch) => {
     try {
       // const response = await fetch(`http://localhost:5001/products/${byId}`);
-      // const response = await fetch(`${import.meta.env.VITE_API_URI}/api/products/${byId}`);
-      const response = await fetch(`https://backend-resturant-food-1.onrender.com/api/products/${byId}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URI}/api/products/${byId}`);
       const data = await response.json();
       dispatch(productAction.setProduct(data))
     } catch (error) {
