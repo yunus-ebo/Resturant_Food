@@ -26,8 +26,10 @@ const Banner = ({ productImages }) => {
         className="bannerImages"
       >
         {productImages.map((caro) => (
-            <Link to={`/bannerPage/${caro.id}`} className="banner-Img">
-              <img src={imageUrI(caro.image)} alt="" />
+            <Link to={`/bannerPage/${caro._id}`} className="banner-Img">
+              <img src={`https://backend-resturant-food-1.onrender.com${caro.image}`} alt="" />
+              
+              {/* <img src={`https://backend-resturant-food-1.onrender.com/api/products${caro.image}`} /> */} {/* Warning: delete /api/products */}
             </Link>
         ))}
       </div>
