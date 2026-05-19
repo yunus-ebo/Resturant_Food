@@ -26,7 +26,7 @@ const Banner = ({ productImages }) => {
         className="bannerImages"
       >
         {productImages.map((caro) => (
-            <Link to={`/bannerPage/${caro.id}`} className="banner-Img">
+            <Link to={`/bannerPage/${caro._id}`} className="banner-Img">
               <img src={imageUrI(caro.image)} alt="" />
             </Link>
         ))}
