@@ -25,6 +25,7 @@ const Banner = ({ productImages }) => {
         }}
         className="bannerImages"
       >
+        <img src={`${import.meta.env.VITE_API_URI}/uploads/products/grill1.jpg`} alt="" />
         {productImages.map((caro) => (
             <Link to={`/bannerPage/${caro.id}`} className="banner-Img">
               <img src={imageUrI(caro.image)} alt="" />
