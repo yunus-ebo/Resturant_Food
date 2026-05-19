@@ -36,22 +36,26 @@ const Footer = () => {
           <h2 className="middle-title"> تابعنا على حساباتنا </h2> 
           <ul className="order-middleList">
             <li className="middle-lists">
-              <a href="">email</a>
+              <a href="" className="social_icon"><i class="bi bi-envelope-fill"></i></a>
             </li>
             <li className="middle-lists">
-              <a href="">whatsapp</a>
+              <a href="" className="social_icon"><i class="bi bi-whatsapp"></i></a>
             </li>
             <li className="middle-lists">
-              <a href="">facebook</a>
+              <a href="" className="social_icon"><i class="bi bi-facebook"></i></a>
             </li>
             <li className="middle-lists">
-              <a href="">instagram</a>
+              <a href="" className="social_icon"><i class="bi bi-instagram"></i></a>
             </li>
           </ul>
         </div>
       </div>
       <div className="bottom-footer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quam.</p>
+        <h4 className="bottom-footer-title"><span className="copy-entity">&copy; 2026</span> Shahoud Oglu </h4>
+        <div className="bottom-footer-texts">
+          <span> أفضل النكهات الشرقية والغربية في مكان واحد </span>
+          <p> يوميا من 10 صباحا حتى 12 مساءا </p>
+        </div>
       </div>
     </footer>
   );

@@ -77,7 +77,8 @@
 }
 .bottom_item_prices span {
   text-decoration: line-through;
-  color: #3c5ee6;
+  /* color: #3c5ee6; */
+  color: #57109e;
   font-weight: bold;
 }
 .percent_discount {

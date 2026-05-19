@@ -18,7 +18,7 @@ const Home = () => {
   const dispatch = useDispatch();
   const {productItems} = useSelector(state => state.product)
   const productImages = productItems.filter(
-    (product) => product.isProduct === true,
+    (product) => product.category === "product",
   );
   const pizzaItems = productItems.filter(
     (product) => product.isPizza === true,

@@ -2,18 +2,18 @@
     "products": [
         {
         "id":1,
-        "caros":"./src/assets/images/pizza1.jpg",
-        "isProduct":true
+        "image":"../src/assets/images/pizza1.jpg",
+        "category":"product"
     },
     {
         "id":2,
-        "caros":"./src/assets/images/pizza2.jpg",
-        "isProduct":true
+        "image":"../src/assets/images/pizza2.jpg",
+        "category":"product"
     },
     {
         "id":3,
-        "caros":"./src/assets/images/pizza3.jpg",
-        "isProduct":true
+        "image":"../src/assets/images/pizza3.jpg",
+        "category":"product"
     },
     {
         "id":4,

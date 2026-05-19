@@ -8,12 +8,14 @@ import CategoryPage from "./pages/category/CategoryPage";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
 import MealsPage from "./pages/mealsPage/MealsPage";
 import Kitchen from "./pages/kitchen/Kitchen";
+import BannerPage from "./pages/bannerPage/BannerPage";
 function App() {
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/bannerPage/:id" element={<BannerPage />} />
         <Route path="/:category" element={<CategoryPage />} />
         <Route path="/mealsPage/:id" element={<MealsPage />} />
         <Route path="/contactUs" element={<ContactUS />} />
