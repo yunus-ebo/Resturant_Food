@@ -1,5 +1,11 @@
 import "./candies.css";
-function Candies({ candyImages }) {
+import { useSelector } from "react-redux";
+
+function Candies() {
+  const { productItems } = useSelector((state) => state.product);
+
+  const candyImages = productItems.filter(candy => candy.category === "offer");
+
   return (
     <div className="candiesContainer">
       <h2 className="candies_title">أفضل 5 أنواع حلويات</h2>
@@ -9,7 +15,7 @@ function Candies({ candyImages }) {
             <li>
               <div className="candy_items">
                 <div className="candy_img">
-                  <img key={candy.id} src={candy.offerImage} alt="" />
+                  <img key={candy._id} src={`https://backend-resturant-food-1.onrender.com${candy.image}`} alt="" />
                 </div>
                 <div className="candy_descrip">
                   <cite className="cite-items">

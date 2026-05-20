@@ -1,8 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-const SwiperCarousel = ({carouselImgs}) => {
-  const swiperImages = carouselImgs.filter(
-    (swipCaro) => swipCaro.isSwiper === true,
+import { useSelector, useDispatch } from "react-redux";
+import { fetchProducts } from "../../redux/apiCalls/productApiCall";
+
+const SwiperCarousel = () => {
+  const { productItems } = useSelector((state) => state.product);
+  const dispatch = useDispatch();
+
+
+  const swiperImages = productItems.filter(
+    (swipCaro) => swipCaro.category === "swiper",
   );
   const [swipSlide, setSwipSlide] = useState(0);
 
@@ -12,6 +19,11 @@ const SwiperCarousel = ({carouselImgs}) => {
   const handlePrevSwip = () => {
     setSwipSlide((prev) => (prev === 0 ? swiperImages.length - 1 : prev - 1));
   };
+
+// useEffect(() => {
+//   dispatch(fetchProducts());
+// },[])
+
   return (
     <div className="swiperCarousel">
       <div
@@ -21,9 +33,12 @@ const SwiperCarousel = ({carouselImgs}) => {
         }}
       >
         {swiperImages.map((swip) => (
-          <Link className="swiperSlide" to={`/singleProduct/${swip.id}`}>
-            <div key={swip.id}>
-              <img src={swip.caros} alt="" />
+          <Link className="swiperSlide" to={`/singleProduct/${swip._id}`}>
+            <div key={swip._id}>
+              <img
+                src={`https://backend-resturant-food-1.onrender.com${swip.image}`}
+                alt=""
+              />
             </div>
           </Link>
         ))}

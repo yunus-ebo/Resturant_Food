@@ -7,14 +7,14 @@ import {carouselImages} from '../../data/tempImgs'
 import Recipe from "../../components/recipes/Recipe";
 import MultipleDishes from "../../components/multipleDishes/MultipleDishes";
 import {useDispatch,useSelector} from 'react-redux'
-import { fetchProducts } from "../../redux/apiCalls/productApiCall";
+// import { fetchProducts } from "../../redux/apiCalls/productApiCall";
 import Candies from "../../components/candies/Candies";
 import Offers from "../../components/offers/Offers";
 
 const iconsCarousel = carouselImages.filter((icon) => icon.category === "icon")
 
 const Home = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const {productItems} = useSelector(state => state.product)
   const productImages = productItems.filter(
     (product) => product.category === "product",
@@ -23,26 +23,19 @@ const Home = () => {
     (product) => product.isPizza === true,
   );
 
-  const carouselImgs = productItems.filter(
-    (carousel) => carousel.isSwiper === true
-    );
 
-    const candyImages = productItems.filter(
-      (offer) => offer.isOffer === true
-    )
-
-  useEffect(() => {
-    dispatch(fetchProducts());
-    window.scrollTo(0, 0);
-  },[]);
+  // useEffect(() => {
+  //   dispatch(fetchProducts());
+  //   window.scrollTo(0, 0);
+  // },[]);
   return (
     <>
       <Banner productImages={productImages}/>
       <div className="homeContainer">
-        <ProductsCarousel carouselImgs={carouselImgs}/>
+        <ProductsCarousel />
         <MultipleDishes iconsCarousel={iconsCarousel}/>
         <Category pizzaItems={pizzaItems}/>
-        <Candies candyImages={candyImages}/>
+        <Candies />
         <Offers />
         {/* <Recipe /> */}
       </div>
