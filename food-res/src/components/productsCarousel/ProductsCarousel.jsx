@@ -1,8 +1,6 @@
 import "./carousel.css";
 import SwiperCarousel from "./SwiperCarousel";
 
-
-
 const ProductsCarousel = () => {
   
   return (
