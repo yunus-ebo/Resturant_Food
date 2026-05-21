@@ -1,10 +1,12 @@
 import "./candies.css";
 import { useSelector } from "react-redux";
-
+import { imageUrI } from "../../imageUrI";
 function Candies() {
   const { productItems } = useSelector((state) => state.product);
 
-  const candyImages = productItems.filter(candy => candy.category === "offer");
+  const candyImages = productItems.filter(
+    (candy) => candy.category === "offer",
+  );
 
   return (
     <div className="candiesContainer">
@@ -15,7 +17,11 @@ function Candies() {
             <li>
               <div className="candy_items">
                 <div className="candy_img">
-                  <img key={candy._id} src={`https://backend-resturant-food-1.onrender.com${candy.image}`} alt="" />
+                  <img
+                    key={candy._id}
+                    src={imageUrI(candy.image)}
+                    alt=""
+                  />
                 </div>
                 <div className="candy_descrip">
                   <cite className="cite-items">

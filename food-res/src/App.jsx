@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bannerPage/:id" element={<BannerPage />} />
+        <Route path="/bannerPage" element={<BannerPage />} />
         <Route path="/:category" element={<CategoryPage />} />
         <Route path="/mealsPage/:id" element={<MealsPage />} />
         <Route path="/contactUs" element={<ContactUS />} />

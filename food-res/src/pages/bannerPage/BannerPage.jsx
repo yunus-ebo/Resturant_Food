@@ -1,27 +1,28 @@
-import './banner.css'
-import singleBanner from '../../assets/images/kabab.png'
+import "./banner.css";
 import { useEffect } from "react";
-import {useDispatch,useSelector } from 'react-redux'
-import {fetchProducts} from '../../redux/apiCalls/productApiCall'
-import { imageUrI } from '../../imageUrI';
+import { useSelector, useDispatch } from "react-redux";
+import { imageUrI } from "../../imageUrI";
+import { fetchProducts } from "../../redux/apiCalls/productApiCall";
 const BannerPage = () => {
-
+  const { productItems } = useSelector((state) => state.product);
   const dispatch = useDispatch();
-  const {productItem} = useSelector(state => state.product);
 
+  const singleBanner = productItems.find(
+    (single) => single.category === "singleBanner",
+  );
 
   useEffect(() => {
     dispatch(fetchProducts());
     window.scrollTo(0, 0);
-  },[]);
+  }, []);
 
-  return(
-     <div>
-        <div className="singleBanner-img">
-          <img src={imageUrI(singleBanner)} alt="" />
-          <span>hello world</span>
-        </div>
-     </div>
+  return (
+    <div className="bannerSinglePage">
+      <div className="singleBanner-img">
+        <img src={imageUrI(singleBanner?.image)} alt="" />
+        <span>hello world</span>
+      </div>
+    </div>
   );
 };
 

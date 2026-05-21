@@ -1,10 +1,13 @@
 import "./category.css";
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux";
+import { imageUrI } from "../../imageUrI";
 
 const Category = () => {
-  const {productItems} = useSelector(state => state.product);
-  const categoryItems = productItems.filter(cate => cate.category === "pizza")
-  
+  const { productItems } = useSelector((state) => state.product);
+  const categoryItems = productItems.filter(
+    (cate) => cate.category === "pizza",
+  );
+
   return (
     <div className="categoryContainer">
       <h2 className="category-title"> أطباقنا الشهية </h2>
@@ -12,7 +15,10 @@ const Category = () => {
         {categoryItems.map((category) => (
           <div className="category-things">
             <div className="category-img">
-              <img src={`https://backend-resturant-food-1.onrender.com${category.image}`} alt="" />
+              <img
+                src={imageUrI(category.image)}
+                alt=""
+              />
             </div>
             <div>
               <h3>{category.title}</h3>

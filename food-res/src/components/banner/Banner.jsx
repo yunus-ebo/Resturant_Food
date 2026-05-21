@@ -1,6 +1,6 @@
 import "./banner.css";
 import { useEffect, useState } from "react";
-import {Link, useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {imageUrI} from '../../imageUrI'
 
 const Banner = ({ productImages }) => {
@@ -26,8 +26,8 @@ const Banner = ({ productImages }) => {
         className="bannerImages"
       >
         {productImages.map((caro) => (
-            <Link to={`/bannerPage/${caro._id}`} className="banner-Img">
-              <img src={`https://backend-resturant-food-1.onrender.com${caro.image}`} alt="" />
+            <Link to={`/bannerPage`} className="banner-Img">
+              <img src={imageUrI(caro.image)} alt="" />
               
               {/* <img src={`https://backend-resturant-food-1.onrender.com/api/products${caro.image}`} /> */} {/* Warning: delete /api/products */}
             </Link>

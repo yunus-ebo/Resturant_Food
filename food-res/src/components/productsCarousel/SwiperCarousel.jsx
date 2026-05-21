@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "../../redux/apiCalls/productApiCall";
-
+import { useSelector } from "react-redux";
+import {imageUrI} from '../../imageUrI'
 const SwiperCarousel = () => {
   const { productItems } = useSelector((state) => state.product);
-  const dispatch = useDispatch();
 
 
   const swiperImages = productItems.filter(
@@ -36,7 +34,7 @@ const SwiperCarousel = () => {
           <Link className="swiperSlide" to={`/singleProduct/${swip._id}`}>
             <div key={swip._id}>
               <img
-                src={`https://backend-resturant-food-1.onrender.com${swip.image}`}
+                src={imageUrI(swip.image)}
                 alt=""
               />
             </div>

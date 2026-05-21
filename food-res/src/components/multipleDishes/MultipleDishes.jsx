@@ -2,7 +2,7 @@ import "./multipleDish.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+import {imageUrI} from '../../imageUrI'
 const MultipleDishes = () => {
   const { productItems } = useSelector((state) => state.product);
 
@@ -49,7 +49,7 @@ const MultipleDishes = () => {
           {iconsCarousel.map((mult) => (
             <li className="multiple-image" key={mult._id}>
               <Link className="multi-link" to={`/mealsPage/${mult._id}`}>
-                <img src={`https://backend-resturant-food-1.onrender.com${mult.icon}`} alt="" />
+                <img src={imageUrI(mult.icon)} alt="" />
                 <p>{mult.title}</p>
               </Link>
             </li>
