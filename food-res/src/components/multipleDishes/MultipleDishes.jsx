@@ -1,8 +1,13 @@
 import "./multipleDish.css";
-// import { carouselImages } from "../../data/tempImgs";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const MultipleDishes = ({ iconsCarousel }) => {
+import { useSelector } from "react-redux";
+
+const MultipleDishes = () => {
+  const { productItems } = useSelector((state) => state.product);
+
+  const iconsCarousel = productItems.filter(icons => icons.category === "icon");
+
   const [current, setCurrent] = useState(0);
   const [startX, setStartX] = useState(0);
 
@@ -42,9 +47,9 @@ const MultipleDishes = ({ iconsCarousel }) => {
       >
         <ul className="multi-wrapper">
           {iconsCarousel.map((mult) => (
-            <li className="multiple-image" key={mult.id}>
-              <Link className="multi-link" to={`/mealsPage/${mult.id}`}>
-                <img src={mult.icon} alt="" />
+            <li className="multiple-image" key={mult._id}>
+              <Link className="multi-link" to={`/mealsPage/${mult._id}`}>
+                <img src={`https://backend-resturant-food-1.onrender.com${mult.icon}`} alt="" />
                 <p>{mult.title}</p>
               </Link>
             </li>
