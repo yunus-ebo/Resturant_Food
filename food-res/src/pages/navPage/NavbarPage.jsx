@@ -1,9 +1,9 @@
-import "./category.css";
+import "./navbarPage.css";
 import { useParams } from "react-router-dom";
 import { navLinks } from "../../data/dataLinks";
-const CategoryPage = () => {
-  const { category } = useParams();
-  const current = navLinks.find((curr) => curr.slug === category); // don't do redux for this
+const NavbarPage = () => {
+  const { navPage } = useParams();
+  const current = navLinks.find((curr) => curr.slug === navPage); // don't do redux for this
   return (
     <div className="westernMealsContainer">
       <h1>{current.label}</h1>
@@ -20,4 +20,4 @@ const CategoryPage = () => {
     </div>
   );
 };
-export default CategoryPage;
+export default NavbarPage;

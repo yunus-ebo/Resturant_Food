@@ -4,11 +4,12 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Orders from "./pages/orders/Orders";
 import ContactUS from "./pages/contactUs/ContactUS";
-import CategoryPage from "./pages/category/CategoryPage";
+import NavbarPage from "./pages/navPage/NavbarPage";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
 import MealsPage from "./pages/mealsPage/MealsPage";
 import Kitchen from "./pages/kitchen/Kitchen";
 import BannerPage from "./pages/bannerPage/BannerPage";
+import CategoryPages from "./pages/categoriesPage/CategoryPages";
 function App() {
   return (
     <>
@@ -16,12 +17,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bannerPage" element={<BannerPage />} />
-        <Route path="/:category" element={<CategoryPage />} />
-        <Route path="/mealsPage/:id" element={<MealsPage />} />
+        <Route path="/:navPage" element={<NavbarPage />} />
+        <Route path="/mealsPage" element={<MealsPage />} />
         <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/kitchen" element={<Kitchen />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/singleProduct/:id" element={<SingleProduct />} />
+        <Route path="/categoriesPage/:id" element={<CategoryPages />}/>
       </Routes>
       <Footer />
     </>

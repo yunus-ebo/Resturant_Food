@@ -1,21 +1,19 @@
 import "./mealsPage.css";
-import { useParams } from "react-router-dom";
-import { carouselImages } from "../../data/tempImgs";
+import { useSelector } from "react-redux";
+import { useEffect } from "react";
+// import {fetchProductById} from "../../redux/apiCalls/productApiCall"
 const MealsPage = () => {
-  const { id } = useParams();
-  const meals = carouselImages.find((meal) => meal.id === +id);
+  const { productItems } = useSelector((state) => state.product);
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  },[])
   return (
     <>
       <div className="mealsContainer">
-        {meals.title}
+        {productItems.title}
         <div className="meals-item">
-          {meals.mealImages.map((meal) => (
-            <>
-              <div className="meal-img">
-                <img key={meal.id} src={meal.mealImage} alt="" />
-              </div>
-            </>
-          ))}
+          hello different meals
         </div>
       </div>
     </>
