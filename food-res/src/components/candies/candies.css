@@ -41,6 +41,8 @@
   align-items: center;
   margin-right: 10px;
   gap: 10px;
+  text-decoration: none;
+  color: var(--text-descrip);
 }
 .candy_descrip {
   display: flex;

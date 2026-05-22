@@ -20,7 +20,8 @@
   --sidebar-backColor: #fcfaf2;
   --box-sh: #110e1a34;
   --footer-back: #57109e;
-  --texts-back: #8013ed;
+  --text-back: #8013ed;
+  --text-descrip: #484747;
   --footer-text: #e8e4e4;
 }
 :root{

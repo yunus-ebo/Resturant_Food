@@ -23,9 +23,9 @@ function Candies() {
                 <div className="candy_descrip">
                   <cite className="cite-items">
                     <i class="bi bi-fork-knife"></i>
-                    <span> {candy.type} </span>
+                    <span> {candy.title} </span>
                   </cite>
-                  <h3 className="candy_h3_title">{candy.descrip}</h3>
+                  <h3 className="candy_h3_title">{candy.description}</h3>
                 </div>
               </Link>
             </li>
