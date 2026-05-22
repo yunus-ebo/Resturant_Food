@@ -102,7 +102,6 @@
 .offer_arrow-right,
 .offer_arrow-left {
   background-color: var(--iconsColor);
-  padding: 5px;
 }
 
 .offer_bottom__text {
@@ -112,8 +111,8 @@
   cursor: pointer;
   position: relative;
 }
-.offer_bottom__text::after{
-  content: '';
+.offer_bottom__text::after {
+  content: "";
   position: absolute;
   bottom: 0;
   right: 0;
@@ -125,6 +124,11 @@
   .offersCarouselContainer {
     display: grid;
     gap: 5px;
+  }
+  .offer_arrow-right,
+  .offer_arrow-left {
+    padding: 5px;
+    font-size: 18px;
   }
   .bottom_item_prices span,
   .bottom_item_prices b {
