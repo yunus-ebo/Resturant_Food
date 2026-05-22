@@ -20,6 +20,8 @@
   --sidebar-backColor: #fcfaf2;
   --box-sh: #110e1a34;
   --footer-back: #57109e;
+  --texts-back: #8013ed;
+  --footer-text: #e8e4e4;
 }
 :root{
   --fontFamily-Changa: "Changa", sans-serif;

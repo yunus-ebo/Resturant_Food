@@ -10,6 +10,9 @@ import MealsPage from "./pages/mealsPage/MealsPage";
 import Kitchen from "./pages/kitchen/Kitchen";
 import BannerPage from "./pages/bannerPage/BannerPage";
 import CategoryPages from "./pages/categoriesPage/CategoryPages";
+import CandyPage from "./pages/candyPage/CandyPage";
+import OfferPage from './pages/offerPage/OfferPage'
+
 function App() {
   return (
     <>
@@ -24,6 +27,8 @@ function App() {
         <Route path="/orders" element={<Orders />} />
         <Route path="/singleProduct/:id" element={<SingleProduct />} />
         <Route path="/categoriesPage/:id" element={<CategoryPages />}/>
+        <Route path="/candyPage/:id" element={<CandyPage />}/>
+        <Route path="/offerPage/:id" element={<OfferPage />}/>
       </Routes>
       <Footer />
     </>

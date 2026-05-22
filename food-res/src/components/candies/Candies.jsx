@@ -1,6 +1,7 @@
 import "./candies.css";
 import { useSelector } from "react-redux";
 import { imageUrI } from "../../imageUrI";
+import { Link } from "react-router-dom";
 function Candies() {
   const { productItems } = useSelector((state) => state.product);
 
@@ -15,13 +16,9 @@ function Candies() {
         <ol className="lst_wrap_candies">
           {candyImages.map((candy) => (
             <li>
-              <div className="candy_items">
+              <Link to={`/candyPage/${candy._id}`} className="candy_items">
                 <div className="candy_img">
-                  <img
-                    key={candy._id}
-                    src={imageUrI(candy.image)}
-                    alt=""
-                  />
+                  <img key={candy._id} src={imageUrI(candy.image)} alt="" />
                 </div>
                 <div className="candy_descrip">
                   <cite className="cite-items">
@@ -30,7 +27,7 @@ function Candies() {
                   </cite>
                   <h3 className="candy_h3_title">{candy.descrip}</h3>
                 </div>
-              </div>
+              </Link>
             </li>
           ))}
         </ol>
