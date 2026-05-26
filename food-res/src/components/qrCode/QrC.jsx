@@ -1,35 +1,18 @@
 
-import {useState, useRef} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import QrCode from 'react-qr-code';
 import * as htmlToImage from 'html-to-image';
 import {imageUrI} from '../../imageUrI'
 
-
-
 const QrC = () => {
-const [qrUrl,setQrUrl] = useState("");
+const [qrUrl,setQrUrl] = useState(null);
 const qrRef = useRef();
 
 // CREATE QR
   const createQr = async () => {
     try {
-      const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create",
-      // we tell fetch what he wants to do
-        {
-          method:"POST",
-          headers:{
-            "Content-Type":"application/json"
-          },
-          body:JSON.stringify({
-            type:"main",
-            originalUrl:"https://backend-resturant-food-1.onrender.com"
-          })
-        }
-      );
+      const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create");
       // we check if res is ok
-      if(!response.ok){
-        throw new Error('request failed');
-      }
       const data = await response.json();
       setQrUrl(data.qrUrl);
       console.log(data);
