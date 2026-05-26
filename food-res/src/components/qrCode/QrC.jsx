@@ -3,15 +3,16 @@ import {useState, useRef} from 'react'
 import QrCode from 'react-qr-code';
 import * as htmlToImage from 'html-to-image';
 import {imageUrI} from '../../imageUrI'
-
+import {useParams} from 'react-router-dom'
 
 const QrC = () => {
 const [qrUrl,setQrUrl] = useState("");
 const qrRef = useRef();
+const {id} = useParams();
 // CREATE QR
   const createQr = async () => {
     try {
-      const response = await fetch(`${imageUrI()}/req/create`,
+      const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create",
       // we tell fetch what he wants to do
         {
           method:"POST",
@@ -20,7 +21,7 @@ const qrRef = useRef();
           },
           body:JSON.stringify({
             type:"main",
-            originalUrl:imageUrI()
+            originalUrl:"https://backend-resturant-food-1.onrender.com"
           })
         }
       );
@@ -42,6 +43,7 @@ const downloadQr = async () => {
   const link = document.createElement('a');
   link.download = 'resturantQR.png';
   link.href = dataUrl;
+  link.click();
 }
 
   return (
