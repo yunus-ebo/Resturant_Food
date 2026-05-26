@@ -1,24 +1,16 @@
-import axios from 'axios';
+
 import {useState, useRef} from 'react'
 import QrCode from 'react-qr-code';
 import * as htmlToImage from 'html-to-image';
 import {imageUrI} from '../../imageUrI'
 
+
+
 const QrC = () => {
 const [qrUrl,setQrUrl] = useState("");
 const qrRef = useRef();
+
 // CREATE QR
-// const createQr = async () => {
-//   try {
-//     const res = await axios.post("https://backend-resturant-food-1.onrender.com/qr/create",{
-//       type:"main",
-//       originalUrl:"https://backend-resturant-food-1.onrender.com"
-//     });
-//     setQrUrl(res.data.qrUrl);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
   const createQr = async () => {
     try {
       const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create",
@@ -82,7 +74,7 @@ INFO:
 -- data.qrUrl:
 # qrUrl => this name must be same name that used in backend 
 and this is the name in backend 👇
-qrUrl: `${process.env.PROJECT_LINK}/${qr._id}`,
+qrUrl: `${process.env.PROJECT_LINK}/qr/${qr._id}`,
 # then:
 data = {
   success: true,
@@ -92,7 +84,7 @@ data = {
 ## as well as in backend which is this:
 res.status(201).json({
       success: true,
-      qrUrl: `${process.env.PROJECT_LINK}/${qr._id}`,
+      qrUrl: `${process.env.PROJECT_LINK}/qr/${qr._id}`,
       data: qr,
 })
 */
