@@ -1,15 +1,24 @@
-// import axios from 'axios';
+import axios from 'axios';
 import {useState, useRef} from 'react'
 import QrCode from 'react-qr-code';
 import * as htmlToImage from 'html-to-image';
 import {imageUrI} from '../../imageUrI'
-import {useParams} from 'react-router-dom'
 
 const QrC = () => {
 const [qrUrl,setQrUrl] = useState("");
 const qrRef = useRef();
-const {id} = useParams();
 // CREATE QR
+// const createQr = async () => {
+//   try {
+//     const res = await axios.post("https://backend-resturant-food-1.onrender.com/qr/create",{
+//       type:"main",
+//       originalUrl:"https://backend-resturant-food-1.onrender.com"
+//     });
+//     setQrUrl(res.data.qrUrl);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
   const createQr = async () => {
     try {
       const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create",
@@ -25,7 +34,7 @@ const {id} = useParams();
           })
         }
       );
-      // wh check if res is ok
+      // we check if res is ok
       if(!response.ok){
         throw new Error('request failed');
       }
