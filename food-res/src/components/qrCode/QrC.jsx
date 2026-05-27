@@ -11,7 +11,17 @@ const qrRef = useRef();
 // CREATE QR
   const createQr = async () => {
     try {
-      const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create");
+      const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({
+          type:"main",
+          originalUrl:"https://resturant-food.onrender.com"
+        })
+      });
+      if(!response.ok){
+        throw new Error("failed request")
+      }
       // we check if res is ok
       const data = await response.json();
       setQrUrl(data.qrUrl);
