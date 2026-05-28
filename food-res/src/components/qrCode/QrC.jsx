@@ -10,7 +10,8 @@ const QrC = () => {
   },[])
   const getQrData = async () => {
     try {
-      const res = await fetch("https://backend-resturant-food-1.onrender.com/api/qr/create");
+      const res = await fetch(`${import.meta.env.VITE_API_URI}/api/qr`);
+      console.log(res);
       // coverting datas to json
       const data = await res.json();
       setBarCode(data.barCode);
