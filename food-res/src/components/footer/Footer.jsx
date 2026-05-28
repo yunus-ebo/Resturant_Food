@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="bottom-footer">
-        <h4 className="bottom-footer-title"><span className="copy-entity">&copy; 2026</span> Shahoud Oglu </h4>
+        <h4 className="bottom-footer-title"><span className="copy-entity">&copy; 2026</span> Restaurant Food </h4>
         <div className="bottom-footer-texts">
           <span> أفضل النكهات الشرقية والغربية في مكان واحد </span>
           <p> يوميا من 10 صباحا حتى 12 مساءا </p>

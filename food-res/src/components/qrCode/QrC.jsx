@@ -44,20 +44,18 @@ export default QrC;
 
 /*
 INFO:
--- data.qrUrl:
-# qrUrl => this name must be same name that used in backend 
+-- data.restaurantQr:
+# qrUrl => this name would be better if it had same name that is used in backend means: this name in controller ( restaurantQr )
 and this is the name in backend 👇
 qrUrl: `${process.env.PROJECT_LINK}/qr/${qr._id}`,
 # then:
 data = {
   success: true,
-  qrUrl:(LINK),
-  data:{...}
+  restaurantQr:{
+  "name":"...",
+  "websiteUrl": "....",
+  "qrCode":"..."
+  }
 }
-## as well as in backend which is this:
-res.status(201).json({
-      success: true,
-      qrUrl: `${process.env.PROJECT_LINK}/qr/${qr._id}`,
-      data: qr,
-})
+
 */
