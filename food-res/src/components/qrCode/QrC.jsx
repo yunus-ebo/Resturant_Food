@@ -34,7 +34,7 @@ const QrC = () => {
       <p>{barCode.websiteUrl}</p>
       <img src={barCode.qrCode} alt="" width="300" />
       <a href={barCode.qrCode} download="restaurant-qr.png">
-        <button>generate Qr</button>
+        <button> تنزيل الباركود </button>
       </a>
     </div>
   );

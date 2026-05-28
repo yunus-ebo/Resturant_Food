@@ -9,7 +9,7 @@ import {useSelector} from 'react-redux'
 // import { fetchProducts } from "../../redux/apiCalls/productApiCall";
 import Candies from "../../components/candies/Candies";
 import Offers from "../../components/offers/Offers";
-import QrC from "../../components/qrCode/QrC";
+// import QrC from "../../components/qrCode/QrC";
 
 
 const Home = () => {
@@ -26,7 +26,7 @@ const Home = () => {
     <>
       <Banner productImages={productImages}/>
       <div className="homeContainer">
-        <QrC />
+        {/* <QrC /> */}
         <ProductsCarousel />
         <MultipleDishes />
         <Category />
