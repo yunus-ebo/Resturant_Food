@@ -1,66 +1,51 @@
-
-import {useState, useRef, useEffect} from 'react'
-import QrCode from 'react-qr-code';
-import * as htmlToImage from 'html-to-image';
-import {imageUrI} from '../../imageUrI'
+import {useEffect, useState} from 'react';
 
 const QrC = () => {
-const [qrUrl,setQrUrl] = useState(null);
-const qrRef = useRef();
-
-// CREATE QR
-  const createQr = async () => {
+  
+  const [barCode,setBarCode] = useState(null);
+  const [loading,setLoading] = useState(true);
+  const [error,setError] = useState("");
+  useEffect(() => {
+    getQrData();
+  },[])
+  const getQrData = async () => {
     try {
-      const response = await fetch("https://backend-resturant-food-1.onrender.com/qr/create",{
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({
-          type:"main",
-          originalUrl:"https://resturant-food.onrender.com"
-        })
-      });
-      if(!response.ok){
-        throw new Error("failed request")
-      }
-      // we check if res is ok
-      const data = await response.json();
-      setQrUrl(data.qrUrl);
-      console.log(data);
+      const res = await fetch("https://backend-resturant-food-1.onrender.com/api/qr/create");
+      // coverting datas to json
+      const data = await res.json();
+      setBarCode(data.barCode);
     } catch (error) {
       console.log(error);
+      setError("failed to fetch Qr code");
+    } finally{
+      setLoading(false);
     }
   }
- 
-// DOWNLOAD QR
-const downloadQr = async () => {
-  const dataUrl = await htmlToImage.toPng(qrRef.current);
-  const link = document.createElement('a');
-  link.download = 'resturantQR.png';
-  link.href = dataUrl;
-  link.click();
-}
-
+  // do special returns for error and loading
+  if(loading){
+    return <h1>loading...</h1>
+  };
+  if(error){
+    return <h1>{error}</h1>
+  }
   return (
-    <div style={{
-      display:'flex',
-      flexDirection:"column",
-      alignItems:"center",
-      gap:"20px"
-    }}>
-      <button onClick={createQr}>Generate Qr</button>
-      {qrUrl && (
-        <>
-        <div ref={qrRef}>
-          <QrCode value={qrUrl} size={250}/>
-        </div>
-        <button onClick={downloadQr}>Download Qr</button>
-        </>
-      )}
+    <div>
+      <h1>{barCode.name}</h1>
+      <p>{barCode.websiteUrl}</p>
+      <img src={barCode.qrCode} alt="" width="300" />
+      <a 
+      href={barCode.qrCode}
+      download="restaurant-qr.png"
+      >
+        <button>
+          generate Qr
+        </button>
+      </a>
     </div>
   )
 }
 
-export default QrC;
+export default QrC
 
 /*
 INFO:
