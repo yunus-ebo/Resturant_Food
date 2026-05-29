@@ -1,5 +1,8 @@
-.westernMealsContainer {
+.navbarPageContainer {
   padding: 0 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
 }
 .westernMeals-images {
   /* ظريقة 1 */
@@ -8,6 +11,13 @@
 
   /* طريقة 2 */
   display: grid;
+}
+
+/* topbar section */
+.topbarContainer{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
 }
 @media (max-width: 426px) {
   .westernMeals-images {

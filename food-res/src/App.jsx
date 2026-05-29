@@ -19,8 +19,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/bannerPage" element={<BannerPage />} />
         <Route path="/:navPage" element={<NavbarPage />} />
+        <Route path="/bannerPage" element={<BannerPage />} />
         <Route path="/mealsPage" element={<MealsPage />} />
         <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/kitchen" element={<Kitchen />} />
