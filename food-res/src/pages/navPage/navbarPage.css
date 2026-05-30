@@ -13,12 +13,36 @@
   display: grid;
 }
 
-/* topbar section */
+/* topbar */
 .topbarContainer{
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
 }
+
+/* pagination */
+.paginationContainer{
+  display: flex;
+  justify-content: center;
+}
+.paginationContainer button{
+  border: none;
+  outline: none;
+}
+.nextBtn{
+  border-radius: 0 5px 5px 0;
+}
+.previousBtn{
+  border-radius: 5px 0 0 5px;
+}
+.paginate_perPage{
+  display: flex;
+}
+.paginate_perPage div{
+  padding: 10px;
+  border: 1px solid #d3d1d1;
+}
+
 @media (max-width: 426px) {
   .westernMeals-images {
     grid-template-columns: 1fr 1fr 1fr;

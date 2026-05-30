@@ -1,11 +1,11 @@
 
-const ListProductsNav = ({itemsSorted}) => {
+const ListProductsNav = ({itemsOrdered}) => {
 
   return (
     <div>
-      <h1>{itemsSorted.label}</h1>
+      <h1>{itemsOrdered.label}</h1>
       <div className="westernMeals-images">
-        {itemsSorted.map((item) => (
+        {itemsOrdered.map((item) => (
           <div className="western-datas">
             <div className="western-img">
               <img key={item.id} src={item.image} />
