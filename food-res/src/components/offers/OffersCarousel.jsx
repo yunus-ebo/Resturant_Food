@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 const OffersCarousel = () => {
   const [indexOffer, setIndexOffer] = useState(0);
+  const [startX, setStartX] = useState(0);
 
   const dispatch = useDispatch();
   const { productItems } = useSelector((state) => state.product);
@@ -24,9 +25,21 @@ const OffersCarousel = () => {
     setIndexOffer((prev) => (prev + 1) % offerTotal);
   };
 
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, []);
+  const handleOfferTouchStart = (e) => {
+    setStartX(e.touches[0].clientX);
+  };
+  const handleOfferTouchEnd = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) {
+      handleOfferLeft();
+    } else if (endX - startX > 50) {
+      handleOfferRight();
+    }
+  };
+
+  // useEffect(() => {
+  //   dispatch(fetchProducts());
+  // }, []);
 
   return (
     <>
@@ -37,6 +50,8 @@ const OffersCarousel = () => {
             style={{
               transform: `translateX(+${indexOffer * 100}%)`,
             }}
+            onTouchStart={handleOfferTouchStart}
+            onTouchEnd={handleOfferTouchEnd}
           >
             {offerCarousel.map((offer) => {
               const finalDiscount =
@@ -86,7 +101,9 @@ const OffersCarousel = () => {
           </div>
         </div>
         <div className="offer_bottom__text">
-          <span>انقر<i class="bi bi-arrow-up-short"></i></span>
+          <span>
+            انقر<i class="bi bi-arrow-up-short"></i>
+          </span>
         </div>
       </div>
     </>

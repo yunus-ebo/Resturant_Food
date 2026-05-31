@@ -5,6 +5,7 @@ import {imageUrI} from '../../imageUrI'
 
 const Banner = ({ productImages }) => {
   const [moveImg, setMoveImg] = useState(0);
+  const [startX, setStartX] = useState(0);
 
   const clickRightHandler = () => {
     setMoveImg((prev) => (prev === productImages.length - 1 ? 0 : prev + 1));
@@ -12,6 +13,19 @@ const Banner = ({ productImages }) => {
   const clickLeftHandler = () => {
     setMoveImg((prev) => (prev === 0 ? productImages.length - 1 : prev - 1));
   };
+
+  const nextTouchHandler = (e) => {
+    setStartX(e.touches[0].clientX);
+  }
+  const endTouchHandler = (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if(startX - endX > 50){
+      clickLeftHandler();
+    } else if(endX - startX > 50){
+      clickRightHandler();
+    }
+  }
+
   useEffect(() => {
     const interval = setInterval(clickRightHandler, 5000);
     return () => clearInterval(interval);
@@ -24,6 +38,8 @@ const Banner = ({ productImages }) => {
           transform: `translateX(+${moveImg * 100}%)`,
         }}
         className="bannerImages"
+        onTouchStart={nextTouchHandler}
+        onTouchEnd={endTouchHandler}
       >
         {productImages.map((caro) => (
             <Link to={`/bannerPage`} className="banner-Img">

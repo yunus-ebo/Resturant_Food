@@ -123,7 +123,7 @@ nav .navbar-ul li :hover{
 }
 .navbar-ul li .nav-link {
   text-decoration: none;
-  padding-right: 2px;
+  padding: 0 2px;
   color: var(--sub-text);
 }
 

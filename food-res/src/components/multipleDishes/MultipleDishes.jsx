@@ -28,9 +28,9 @@ const MultipleDishes = () => {
   const handleTouchend = (e) => {
     const endX = e.changedTouches[0].clientX;
     if (startX - endX > 50) {
-      goPrev();
-    } else if (endX - startX > 50) {
       goNext();
+    } else if (endX - startX > 50) {
+      goPrev();
     }
   };
   return (
