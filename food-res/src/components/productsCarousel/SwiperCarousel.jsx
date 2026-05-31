@@ -53,7 +53,7 @@ const SwiperCarousel = () => {
         <div className="dots">
           {swiperImages.map((_, index) => (
             <span
-              className={swiperImages === index ? "dot active" : "dot"}
+              className={swipSlide === index ? "dot active" : "dot"}
               key={index}
               onClick={() => setSwipSlide(index)} // becareful to not add (handleNextSwip) because you want to go the img you selected not move one by one
             ></span>
