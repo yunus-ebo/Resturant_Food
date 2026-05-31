@@ -16,11 +16,11 @@ const MultipleDishes = () => {
 
   const goNext = () => {
     // setCurrent((prev) => (prev === iconsCarousel.length - 1 ? 0 : prev + 1));
-    setCurrent((prev) => (prev + 1) % total);
+    setCurrent((prev) => (prev - 1 + total) % total);
   };
   const goPrev = () => {
     // setCurrent((prev) => (prev === 0 ? iconsCarousel.length - 1 : prev - 1));
-    setCurrent((prev) => (prev - 1 + total) % total);
+    setCurrent((prev) => (prev + 1) % total);
   };
   const handleTouchStart = (e) => {
     setStartX(e.touches[0].clientX);

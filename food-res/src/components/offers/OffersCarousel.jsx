@@ -31,9 +31,9 @@ const OffersCarousel = () => {
   const handleOfferTouchEnd = (e) => {
     const endX = e.changedTouches[0].clientX;
     if (startX - endX > 50) {
-      handleOfferLeft();
-    } else if (endX - startX > 50) {
       handleOfferRight();
+    } else if (endX - startX > 50) {
+      handleOfferLeft();
     }
   };
 
