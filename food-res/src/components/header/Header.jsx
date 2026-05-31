@@ -4,8 +4,8 @@ import Navbar from "./Navbar";
 import { useState } from "react";
 
 const Header = () => {
-  const [toggle,setToggle] = useState(false)
-  
+  const [toggle, setToggle] = useState(false);
+
   return (
     <header>
       <div className="top-header">
@@ -13,15 +13,18 @@ const Header = () => {
           <div className="search-icon">
             <i class="fa-brands fa-sistrix"></i>
           </div>
-          <div className="user-icon">
+          <Link to={"/authentication"} className="user-icon">
             <i class="fa-regular fa-user"></i>
-          </div>
+          </Link>
         </div>
         <div className="top-middleSection">
-          <img className="logo-header" src="../../../public/images/shLogo.png" alt="" />
+          <img
+            className="logo-header"
+            src="../../../public/images/shLogo.png"
+            alt=""
+          />
         </div>
-        <div className={`top-leftSection ${toggle && "open"}`}
-        >
+        <div className={`top-leftSection ${toggle && "open"}`}>
           <div className="icon-closeLeft" onClick={() => setToggle(false)}>
             <i class="bx bx-x-circle" />
           </div>
@@ -45,7 +48,7 @@ const Header = () => {
           <i className="bx bx-menu" />
         </div>
       </div>
-      <Navbar /> 
+      <Navbar />
     </header>
   );
 };

@@ -1,0 +1,46 @@
+.authenticationContainer {
+  padding: 70px;
+  text-align: center;
+}
+.authenticationContainer div {
+  font-family: var(--fontFamily-Noto-Kufi);
+  border: 2px dashed var(--iconsColor);
+  padding: 20px;
+  font-weight: 500;
+  animation-name: moving;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.authenticationContainer div p {
+  position: relative;
+}
+.authenticationContainer div p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  height: 12px;
+  background-color: var(--border-color);
+  z-index: -1;
+}
+
+@keyframes moving {
+  0% {
+    border: 2px dashed #00c3ff;
+  }
+  25% {
+    border: 2px dashed #ff0000;
+  }
+  50% {
+    border: 2px dashed #00c3ff;
+  }
+  75% {
+    border: 2px dashed #ff0000;
+  }
+  100% {
+    border: 2px dashed #00c3ff;
+  }
+}

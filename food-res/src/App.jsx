@@ -12,6 +12,7 @@ import BannerPage from "./pages/bannerPage/BannerPage";
 import CategoryPages from "./pages/categoriesPage/CategoryPages";
 import CandyPage from "./pages/candyPage/CandyPage";
 import OfferPage from './pages/offerPage/OfferPage'
+import Auth from "./pages/authentication/Auth";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/authentication" element={<Auth />}/>
         <Route path="/:navPage" element={<NavbarPage />} />
         <Route path="/bannerPage" element={<BannerPage />} />
         <Route path="/mealsPage" element={<MealsPage />} />

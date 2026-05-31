@@ -3,8 +3,8 @@ header {
   background-color: #fff;
   position: relative;
 }
-header::before{
-  content: '';
+header::before {
+  content: "";
   position: absolute;
   bottom: -8px;
   height: 2px;
@@ -22,8 +22,8 @@ header::before{
   grid-template-areas: "rightSection middleSection leftSection";
   align-items: center;
 }
-.top-header:before{
-  content: '';
+.top-header:before {
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -46,6 +46,7 @@ header::before{
 
 .top-header .top-rightSection {
   display: flex;
+  align-items: center;
 }
 .top-header .top-rightSection div {
   margin-left: 15px;
@@ -57,6 +58,9 @@ header::before{
 }
 .top-header .top-rightSection div:hover {
   color: #d6a645;
+}
+.top-rightSection .user-icon {
+  color: #000;
 }
 .top-header .top-leftSection {
   display: flex;
@@ -96,7 +100,7 @@ header::before{
 }
 /* Navbar section */
 nav {
-  padding:  0;
+  padding: 0;
   z-index: 700;
 }
 nav .close {
@@ -118,7 +122,7 @@ nav .navbar-ul {
   font-family: var(--fontFamily-Changa);
 }
 
-nav .navbar-ul li :hover{
+nav .navbar-ul li :hover {
   color: var(--iconsColor);
 }
 .navbar-ul li .nav-link {
@@ -134,6 +138,9 @@ nav .navbar-ul li :hover{
     grid-template-areas:
       "leftSection leftSection leftSection"
       "menuBar middleSection rightSection";
+  }
+  .top-rightSection .user-icon {
+    font-size: 18px;
   }
   .top-leftSection {
     justify-self: start;
