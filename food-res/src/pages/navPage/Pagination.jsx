@@ -12,7 +12,9 @@ const Pagination = ({pages, currentPag, setCurrentPag}) => {
         disabled={currentPag === pages}
         className="nextBtn"> التالي </button>
             {pagesNum.map(item => (
-                <div className="paginate_perPage">
+                <div
+                onClick={() => setCurrentPag(item)}
+                 className="paginate_perPage">
                     {item}
                 </div>
             ))}
