@@ -37,9 +37,9 @@ const OffersCarousel = () => {
     }
   };
 
-  // useEffect(() => {
-  //   dispatch(fetchProducts());
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, []);
 
   return (
     <>
