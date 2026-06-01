@@ -16,8 +16,25 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.offer_bottomText {
+  font-family: var(--fontFamily-Tajawal);
+  position: relative;
+  font-weight: 500;
+}
+
+.offer_bottomText::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* width: 15%; */
+  margin: auto;
+  background-color: #ffaa00;
+  height: 2px;
+}
 .offersCarouselContainer {
-  margin-top: 6px;
+  margin-top: 12px;
 }
 
 /* Start Carousel */
@@ -51,11 +68,23 @@
 }
 .offer_item_img {
   padding: 6px;
+  position: relative;
 }
 .offer_item_img img {
   width: 100%;
   height: 150px;
   border-radius: 5px;
+}
+.offer_item_img span {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  background-color: var(--footer-back);
+  color: var(--textWhiteColor);
+  width: 58%;
+  padding: 2px 5px;
+  border-radius: 4px 0 0 4px;
+  font-family: var(--fontFamily-Messiri);
 }
 /* End Carousel */
 
@@ -68,6 +97,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .percent_discount {
   margin-bottom: 10px;
@@ -80,7 +110,6 @@
 }
 .bottom_item_prices span {
   text-decoration: line-through;
-  /* color: #3c5ee6; */
   color: #57109e;
   font-weight: bold;
 }
@@ -88,6 +117,7 @@
   background-color: #fbe9c6;
   font-family: var(--fontFamily-Messiri);
   font-weight: 500;
+  padding: 2px 3px;
 }
 
 .offer_carousel_bottom {
@@ -105,26 +135,24 @@
   background-color: var(--iconsColor);
 }
 
-.offer_bottom__text {
-  font-family: var(--fontFamily-Tajawal);
-  font-weight: 500;
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-}
-.offer_bottom__text::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: #ffaa00;
-  height: 2px;
-}
 @media (max-width: 386px) {
   .offersCarouselContainer {
     display: grid;
     gap: 5px;
+  }
+  .offer_item_img span {
+    font-size: 13px;
+  }
+
+  .offer_bottomText {
+    padding: 3px 5px;
+    font-size: 18px;
+  }
+  .percent_discount {
+    font-size: 15px;
+}
+  .offer_bottomText::after {
+    width: 85%;
   }
   .offer_arrow-right,
   .offer_arrow-left {
@@ -135,12 +163,5 @@
   .bottom_item_prices b {
     margin: 10px 5px;
     padding: 3px;
-  }
-  .offer_bottom__text {
-    padding: 3px 5px;
-  }
-  .offer_bottom__text span {
-    font-size: 20px;
-    font-weight: 500;
   }
 }

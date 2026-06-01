@@ -12,7 +12,7 @@ const OffersCarousel = () => {
   const { productItems } = useSelector((state) => state.product);
 
   const offerCarousel = productItems.filter(
-    (offer) => offer.category === "dessert",
+    (offer) => offer.category === "offer",
   );
 
   let offerSlide = 2;
@@ -68,13 +68,13 @@ const OffersCarousel = () => {
                 >
                   <div className="offer_item_img">
                     <img src={imageUrI(image)} alt="" />
+                    <span> تخفيضات بنسبة {discount}% </span>
                   </div>
                   <div className="offer_item_offer_descrip">
-                    <p className="Subtitle_descrip">{description}</p>
                     {discount > 0 ? (
                       <div className="offer_item_prices">
                         <p className="percent_discount">
-                          تخفيضات بنسبة {discount}%
+                          احصل على وجبة بعرض مميز
                         </p>
                         <div className="bottom_item_prices">
                           <span>{price}$</span>
@@ -100,9 +100,9 @@ const OffersCarousel = () => {
             <i class="bi bi-arrow-left-short"></i>
           </div>
         </div>
-        <div className="offer_bottom__text">
+         <div className="offer_bottomText">
           <span>
-            انقر<i class="bi bi-arrow-up-short"></i>
+            اسحب <i class="bi bi-arrow-left-short"></i>
           </span>
         </div>
       </div>
