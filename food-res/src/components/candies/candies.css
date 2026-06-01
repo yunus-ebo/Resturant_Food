@@ -24,12 +24,16 @@
   counter-reset: counting;
   display: flex;
   flex-direction: column;
+  margin: 10px 0;
 }
 .lst_wrap_candies li {
   counter-increment: counting;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+}
+.lst_wrap_candies li:last-child{
+  margin-bottom: 10px;
 }
 .lst_wrap_candies li::before {
   content: counter(counting);
@@ -79,7 +83,7 @@
   }
   .candy_img img {
     width: 80px;
-    height: 80px;
+    height: 75px;
   }
   .candy_h3_title {
     font-size: 16px;
