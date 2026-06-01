@@ -6,7 +6,7 @@ function Candies() {
   const { productItems } = useSelector((state) => state.product);
 
   const candyImages = productItems.filter(
-    (candy) => candy.category === "offer",
+    (candy) => candy.category === "dessert",
   );
 
   return (

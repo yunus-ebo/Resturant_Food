@@ -12,7 +12,7 @@ const OffersCarousel = () => {
   const { productItems } = useSelector((state) => state.product);
 
   const offerCarousel = productItems.filter(
-    (offer) => offer.category === "offer",
+    (offer) => offer.category === "dessert",
   );
 
   let offerSlide = 2;

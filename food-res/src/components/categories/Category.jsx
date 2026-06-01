@@ -6,12 +6,12 @@ import { imageUrI } from "../../imageUrI";
 const Category = () => {
   const { productItems } = useSelector((state) => state.product);
   const categoryItems = productItems.filter(
-    (cate) => cate.category === "pizza",
+    (cate) => cate.category === "special_plates",
   );
 
   return (
     <div className="categoryContainer">
-      <h2 className="category-title"> أطباقنا الشهية </h2>
+      <h2 className="category-title"> أطباقنا المميزة </h2>
       <div className="categories">
         {categoryItems.map((category) => (
           <Link to={`/categoriesPage/${category._id}`} className="category-links">
