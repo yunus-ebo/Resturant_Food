@@ -14,7 +14,7 @@ const MyOrder = () => {
           </div>
           <div>
             {order?.images.map((img,index) => (
-              <img key={index} src={imageUrI(img?.image)} onClick={() => setImgIndex(index)}/>
+              <img key={index} src={imageUrI(img)} onClick={() => setImgIndex(index)}/>
             ))}
             <p>{order?.description}</p>
           </div>
