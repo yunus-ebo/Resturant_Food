@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchProductById } from "../../redux/apiCalls/productApiCall";
 import { imageUrI } from "../../imageUrI";
+import { addItemToOrders } from "../../redux/apiCalls/cartApiCall";
 
 const SingleProduct = () => {
   const dispatch = useDispatch();
@@ -16,6 +17,19 @@ const SingleProduct = () => {
     dispatch(fetchProductById(id));
     window.scrollTo(0, 0);
   }, [id]);
+
+  const addToOrdersHandler = () => {
+    dispatch(addItemToOrders({
+      id:productItem?.id,
+      image:productItem?.image,
+      images:productItem?.images,
+      description:productItem?.description,
+      price:productItem?.price
+    }))
+  }
+
+
+
   return (
     <div className="singleProductContainer">
       <div className="single-img">
@@ -34,6 +48,7 @@ const SingleProduct = () => {
         ))}
       </div>
       <p className="descrip">{productItem?.description}</p>
+      <button onClick={addToOrdersHandler}> أضف لسلة التسوق </button>
     </div>
   );
 };

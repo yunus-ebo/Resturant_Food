@@ -14,7 +14,6 @@ header::before {
 /* grid start */
 .top-header {
   position: relative;
-  text-align: center;
   padding: 8px 20px;
   display: grid;
   /* grid-auto-rows: minmax(50px, auto); */
@@ -44,22 +43,24 @@ header::before {
 }
 /* grid end */
 
-.top-header .top-rightSection {
+.top-rightSection {
   display: flex;
   align-items: center;
 }
-.top-header .top-rightSection div {
-  margin-left: 15px;
+.top-rightSection .topRight_divs {
   font-size: 22px;
   cursor: pointer;
   transition: 0.3s;
   display: flex;
   align-items: center;
 }
-.top-header .top-rightSection div:hover {
+.top-rightSection .topRight_divs:hover {
   color: #d6a645;
 }
 .top-rightSection .user-icon {
+  color: #000;
+}
+.top-rightSection .cart-icon {
   color: #000;
 }
 .top-header .top-leftSection {
@@ -131,6 +132,22 @@ nav .navbar-ul li :hover {
   color: var(--sub-text);
 }
 
+/* for icons place start */
+.top-rightSection {
+  display: grid;
+  grid-template-areas: "iconSearch iconUser iconCart";
+}
+.search-icon {
+  grid-area: iconSearch;
+}
+.user-icon {
+  grid-area: iconUser;
+}
+.cart-icon {
+  grid-area: iconCart;
+}
+/* for icons place start */
+
 /* Media Query */
 @media (max-width: 768px) {
   .top-header {
@@ -139,8 +156,8 @@ nav .navbar-ul li :hover {
       "leftSection leftSection leftSection"
       "menuBar middleSection rightSection";
   }
-  .top-rightSection .user-icon {
-    font-size: 18px;
+  .top-rightSection .topRight_divs {
+    font-size: 20px;
   }
   .top-leftSection {
     justify-self: start;
@@ -153,6 +170,19 @@ nav .navbar-ul li :hover {
 }
 
 @media (max-width: 386px) {
+  .top-rightSection {
+    grid-template-areas: "iconCart iconUser iconSearch";
+  }
+  .search-icon {
+    grid-area: iconSearch;
+  }
+  .user-icon {
+    grid-area: iconUser;
+  }
+  .cart-icon {
+    grid-area: iconCart;
+  }
+
   .top-header {
     padding: 5px 20px;
   }
@@ -163,8 +193,7 @@ nav .navbar-ul li :hover {
   .top-middleSection img {
     width: 150px;
   }
-  /* !important: is important so without it {display:none} won't work because of {display:flex} and this is stronger than none */
-  /* display: none !important; */
+
   .top-leftSection {
     display: flex;
     flex-direction: column;
@@ -198,14 +227,6 @@ nav .navbar-ul li :hover {
   .navbar-ul li .nav-link {
     font-size: 13px;
   }
-  .top-header .top-rightSection div {
-    margin-left: 5px;
-  }
-}
-@media (max-width: 376px) {
-  .navbar-ul li .nav-link {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 320px) {
@@ -216,3 +237,9 @@ nav .navbar-ul li :hover {
       "menuBar middleSection rightSection";
   }
 }
+
+/* 
+INFO:
+  !important: is important so without it {display:none} won't work because of {display:flex} and this is stronger than none
+  display: none !important;
+*/

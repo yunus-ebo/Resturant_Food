@@ -2,6 +2,7 @@ import "./header.css";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useState } from "react";
+import { CartCheck } from "@boxicons/react";
 
 const Header = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,11 +11,14 @@ const Header = () => {
     <header>
       <div className="top-header">
         <div className="top-rightSection">
-          <div className="search-icon">
+          <div className="search-icon topRight_divs">
             <i class="fa-brands fa-sistrix"></i>
           </div>
-          <Link to={"/authentication"} className="user-icon">
+          <Link to={"/authentication"} className="user-icon topRight_divs">
             <i class="fa-regular fa-user"></i>
+          </Link>
+          <Link to={"/myOrder"} className="cart-icon topRight_divs">
+            <CartCheck />
           </Link>
         </div>
         <div className="top-middleSection">

@@ -13,6 +13,7 @@ import CategoryPages from "./pages/categoriesPage/CategoryPages";
 import CandyPage from "./pages/candyPage/CandyPage";
 import OfferPage from './pages/offerPage/OfferPage'
 import Auth from "./pages/authentication/Auth";
+import MyOrder from "./pages/myOrder/MyOrder";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/categoriesPage/:id" element={<CategoryPages />}/>
         <Route path="/candyPage/:id" element={<CandyPage />}/>
         <Route path="/offerPage/:id" element={<OfferPage />}/>
+        <Route path="/myOrder" element={<MyOrder />} />
       </Routes>
       <Footer />
     </>
