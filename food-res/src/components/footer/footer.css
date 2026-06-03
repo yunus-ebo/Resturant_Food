@@ -11,6 +11,8 @@ footer::before {
   width: 100%;
   background: linear-gradient(180deg, #fef8f8, #faebd760);
 }
+
+
 .footer-topList .order-topList {
   padding: 0;
   display: grid;
@@ -104,6 +106,10 @@ footer::before {
   gap: 5px;
 }
 @media (max-width: 386px) {
+  .logo img{
+    width: 20%;
+    height: 80px;
+}
   .footer-topList .order-topList {
     grid-template-columns: 1fr 1fr;
   }

@@ -1,19 +1,21 @@
 import "./footer.css";
-import {imageUrI} from '../../imageUrI';
-import {useSelector} from 'react-redux'
-
+import { imageUrI } from "../../imageUrI";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
-  const {productItems} = useSelector(state => state.product);
-  const logo = productItems.filter(product => product.category === "logo");
-  
+  const { productItems } = useSelector((state) => state.product);
+  const logoImage = productItems.filter(
+    (product) => product.category == "logo",
+  );
+
   return (
     <footer>
       <div className="top-footer">
         <div className="footer-logo">
-          <div>
-            {/* <a href="https://resturant-food.onrender.com"></a> */}
-              <img src={imageUrI(logo.image)} alt="" />   
+          <div className="logo">
+            {logoImage.map((item) => (
+              <img src={imageUrI(item.image)} alt="" />
+            ))}
           </div>
         </div>
         <div className="footer-topList">
@@ -39,25 +41,35 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-middleList">
-          <h2 className="middle-title"> تابعنا على حساباتنا </h2> 
+          <h2 className="middle-title"> تابعنا على حساباتنا </h2>
           <ul className="order-middleList">
             <li className="middle-lists">
-              <a href="" className="social_icon"><i class="bi bi-envelope-fill"></i></a>
+              <a href="" className="social_icon">
+                <i class="bi bi-envelope-fill"></i>
+              </a>
             </li>
             <li className="middle-lists">
-              <a href="" className="social_icon"><i class="bi bi-whatsapp"></i></a>
+              <a href="" className="social_icon">
+                <i class="bi bi-whatsapp"></i>
+              </a>
             </li>
             <li className="middle-lists">
-              <a href="" className="social_icon"><i class="bi bi-facebook"></i></a>
+              <a href="" className="social_icon">
+                <i class="bi bi-facebook"></i>
+              </a>
             </li>
             <li className="middle-lists">
-              <a href="" className="social_icon"><i class="bi bi-instagram"></i></a>
+              <a href="" className="social_icon">
+                <i class="bi bi-instagram"></i>
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="bottom-footer">
-        <h4 className="bottom-footer-title"><span className="copy-entity">&copy; 2026</span> Restaurant Food </h4>
+        <h4 className="bottom-footer-title">
+          <span className="copy-entity">&copy; 2026</span> Restaurant Food{" "}
+        </h4>
         <div className="bottom-footer-texts">
           <span> أفضل النكهات الشرقية والغربية في مكان واحد </span>
           <p> يوميا من 10 صباحا حتى 12 مساءا </p>

@@ -10,26 +10,22 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
   const { productItem } = useSelector((state) => state.product);
   const { id } = useParams();
-
   const [imageIndex, setImageIndex] = useState(0);
-
   useEffect(() => {
     dispatch(fetchProductById(id));
     window.scrollTo(0, 0);
   }, [id]);
-
   const addToOrdersHandler = () => {
-    dispatch(addItemToOrders({
-      id:productItem?.id,
-      image:productItem?.image,
-      images:productItem?.images,
-      description:productItem?.description,
-      price:productItem?.price
-    }))
-  }
-
-
-
+    dispatch(
+      addItemToOrders({
+        id: productItem?.id,
+        image: productItem?.image,
+        images: productItem?.images[imageIndex],
+        description: productItem?.description,
+        price: productItem?.price,
+      }),
+    );
+  };
   return (
     <div className="singleProductContainer">
       <div className="single-img">

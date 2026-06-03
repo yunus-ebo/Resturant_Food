@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {imageUrI} from '../../imageUrI'
@@ -29,10 +29,6 @@ const SwiperCarousel = () => {
       handleNextSwip();
     }
   }
-
-// useEffect(() => {
-//   dispatch(fetchProducts());
-// },[])
 
   return (
     <div className="swiperCarousel">

@@ -3,9 +3,13 @@ import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useState } from "react";
 import { CartCheck } from "@boxicons/react";
-
+import { imageUrI } from "../../imageUrI";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
+  const { productItems } = useSelector((state) => state.product);
+
+  const logo = productItems.filter((product) => product.category == "logo");
 
   return (
     <header>
@@ -22,11 +26,9 @@ const Header = () => {
           </Link>
         </div>
         <div className="top-middleSection">
-          <img
-            className="logo-header"
-            src="../../../public/images/shLogo.png"
-            alt=""
-          />
+          {logo.map((item) => (
+            <img className="logo-header" src={imageUrI(item.image)} alt="" />
+          ))}
         </div>
         <div className={`top-leftSection ${toggle && "open"}`}>
           <div className="icon-closeLeft" onClick={() => setToggle(false)}>
