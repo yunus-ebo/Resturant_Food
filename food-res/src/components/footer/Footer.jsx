@@ -1,13 +1,19 @@
 import "./footer.css";
+import {imageUrI} from '../../imageUrI';
+import {useSelector} from 'react-redux'
+
 
 const Footer = () => {
+  const {productItems} = useSelector(state => state.product);
+  const logo = productItems.filter(product => product.category === "logo");
+  
   return (
     <footer>
       <div className="top-footer">
         <div className="footer-logo">
           <div>
             {/* <a href="https://resturant-food.onrender.com"></a> */}
-              <img src="../../../public/images/shLogo.png" alt="" />     
+              <img src={imageUrI(logo.image)} alt="" />   
           </div>
         </div>
         <div className="footer-topList">
