@@ -1,4 +1,28 @@
- img{
-    width: 100px;
-    height: 100px;
+.OrdersContainer {
+  display: grid;
+  gap: 5px;
+  margin-top: 20px;
+}
+.orderRemove-icon {
+  cursor: pointer;
+}
+.orders_data {
+  display: flex;
+}
+@media (max-width: 386px) {
+  .OrdersContainer {
+    grid-template-columns: 1fr;
+    justify-self: center;
+  }
+  .orders_data {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    border: 5px solid var(--iconsColor);
+  }
+  .orders_data img {
+    width: 100%;
+    height: 150px;
+  }
 }

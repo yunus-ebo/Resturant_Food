@@ -3,8 +3,8 @@ import { ordersCartAction } from "../slices/cartSlices";
 export function addItemToOrders(newItem) {
   // return (dispatch, getState)
   return (sendAction, getStoreState) => {
-    const { ordersCart } = getStoreState();
     sendAction(ordersCartAction.addToCartOrders(newItem));
+    const { ordersCart } = getStoreState();
     localStorage.setItem(
       "Orders_cart",
       JSON.stringify(ordersCart.orderCartItems),

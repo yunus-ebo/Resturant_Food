@@ -11,6 +11,7 @@ const SingleProduct = () => {
   const { productItem } = useSelector((state) => state.product);
   const { id } = useParams();
   const [imageIndex, setImageIndex] = useState(0);
+  const [qty,setQty] = useState(1);
   useEffect(() => {
     dispatch(fetchProductById(id));
     window.scrollTo(0, 0);
@@ -18,7 +19,7 @@ const SingleProduct = () => {
   const addToOrdersHandler = () => {
     dispatch(
       addItemToOrders({
-        id: productItem?.id,
+        _id: productItem?._id, 
         image: productItem?.image,
         images: productItem?.images[imageIndex],
         description: productItem?.description,

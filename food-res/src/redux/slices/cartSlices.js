@@ -9,11 +9,11 @@ const orderCartSlices = createSlice({
     addToCartOrders(state, action) {
       const newItem = action.payload;
       const checkForItem = state.orderCartItems.find(
-        (item) => item.id == newItem.id,
+        (item) => item._id === newItem._id, // we have to write id as well as it is written in mongodb means: _id 
       );
       if (checkForItem) {
         state.orderCartItems = state.orderCartItems.map((item) =>
-          item.id == newItem.id ? newItem : item,
+          item._id === newItem._id ? newItem : item,
         );
       } else {
         state.orderCartItems = [...state.orderCartItems, newItem];
@@ -21,7 +21,7 @@ const orderCartSlices = createSlice({
     },
     removeItemFromOrders(state, action) {
       state.orderCartItems = state.orderCartItems.filter(
-        (item) => item.id !== action.payload,
+        (item) => item._id !== action.payload,
       );
     },
   },
