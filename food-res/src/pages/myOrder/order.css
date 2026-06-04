@@ -26,6 +26,29 @@
   background-color: var(--border-color);
   z-index: -1;
 }
+.order_title {
+  font-family: var(--fontFamily-Messiri);
+  color: #00c3ff;
+  text-align: center;
+  position: relative;
+  padding: 10px 0;
+  margin-bottom: 15px;
+  animation-duration: 0.5s;
+  animation-name: noItem;
+  animation-iteration-count: infinite;
+}
+.order_title::after {
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  width: 50%;
+  margin: auto;
+  height: 10px;
+  background-color: var(--border-color);
+  z-index: -1;
+}
 @keyframes noItem {
   0% {
     border: 2px dashed #00c3ff;
@@ -49,8 +72,10 @@
   margin-top: 20px;
   padding: 5px;
 }
+
 .orderRemove-icon {
   cursor: pointer;
+  color: #ff0000;
 }
 .orders_data {
   display: flex;
