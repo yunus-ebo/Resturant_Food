@@ -1,7 +1,53 @@
+.ifNoItemsInOrder {
+  text-align: center;
+  padding: 50px;
+}
+.ifNoItemsInOrder div {
+  padding: 20px;
+  animation-duration: 0.5s;
+  animation-name: noItem;
+  animation-iteration-count: infinite;
+}
+.ifNoItemsInOrder div p {
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: var(--fontFamily-Noto-Kufi);
+}
+.ifNoItemsInOrder div p::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: auto;
+  height: 12px;
+  background-color: var(--border-color);
+  z-index: -1;
+}
+@keyframes noItem {
+  0% {
+    border: 2px dashed #00c3ff;
+  }
+  25% {
+    border: 2px dashed #ff0000;
+  }
+  50% {
+    border: 2px dashed #00c3ff;
+  }
+  75% {
+    border: 2px dashed #ff0000;
+  }
+  100% {
+    border: 2px dashed #00c3ff;
+  }
+}
 .OrdersContainer {
   display: grid;
   gap: 5px;
   margin-top: 20px;
+  padding: 5px;
 }
 .orderRemove-icon {
   cursor: pointer;

@@ -45,7 +45,7 @@ const SingleProduct = () => {
         ))}
       </div>
       <p className="descrip">{productItem?.description}</p>
-      <button onClick={addToOrdersHandler}> أضف لسلة التسوق </button>
+      <button onClick={addToOrdersHandler}> أضف لسلة طلباتك </button>
     </div>
   );
 };
