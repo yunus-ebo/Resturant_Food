@@ -6,7 +6,7 @@
     grid-template-columns: auto 1fr;
     flex-wrap: wrap;
 }
-.meal-img img{
+
+.dishes-img img{
     width: 100px;
-    height: 80px;
 }

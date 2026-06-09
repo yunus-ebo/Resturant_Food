@@ -2,6 +2,7 @@ import "./candies.css";
 import { useSelector } from "react-redux";
 import { imageUrI } from "../../imageUrI";
 import { Link } from "react-router-dom";
+
 function Candies() {
   const { productItems } = useSelector((state) => state.product);
 
