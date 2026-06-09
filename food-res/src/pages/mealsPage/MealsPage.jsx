@@ -27,9 +27,9 @@ const MealsPage = () => {
               <img src={imageUrI(dish.image)} alt="" />
             </div>
             <p>{dish.item}</p>
-            <Link to={"/myOrder"}>
+            <div >
               <CartPlus />
-            </Link>
+            </div>
           </div>
         ))}
       </div>
