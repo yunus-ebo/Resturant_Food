@@ -1,10 +1,12 @@
 import "./mealsPage.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { imageUrI } from "../../imageUrI";
-// import {fetchProductById} from "../../redux/apiCalls/productApiCall"
+import {fetchProducts} from "../../redux/apiCalls/productApiCall"
 const MealsPage = () => {
   const { productItems } = useSelector((state) => state.product);
+
+  const dispatch = useDispatch();
 
   const mainDishes = productItems.filter(
     (main) => main.category === "special_plates",
@@ -12,9 +14,9 @@ const MealsPage = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    dispatch(fetchProducts());
   }, []);
   return (
-    <>
       <div className="mealsContainer">
         {mainDishes.map((dish) => {
           const { title, image } = dish;
@@ -31,7 +33,6 @@ const MealsPage = () => {
         })}
         <div className="meals-item">hello different meals</div>
       </div>
-    </>
   );
 };
 export default MealsPage;
