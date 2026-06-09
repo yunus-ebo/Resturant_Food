@@ -13,7 +13,7 @@ const NavbarPage = () => {
   const { navPage } = useParams();
   const current = navLinks.find((curr) => curr.slug === navPage);
   // doing filtering
-  const itemsFiltered = current.images.filter(item => 
+  const itemsFiltered = current.gallery.filter(item => 
     filterItem === "Filtitem1" ?
     item.category === "item1" :
     filterItem === "Filtitem2" ?

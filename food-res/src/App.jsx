@@ -24,7 +24,7 @@ function App() {
         <Route path="/authentication" element={<Auth />}/>
         <Route path="/:navPage" element={<NavbarPage />} />
         <Route path="/bannerPage" element={<BannerPage />} />
-        <Route path="/mealsPage" element={<MealsPage />} />
+        <Route path="/mealsPage/:mealsPage" element={<MealsPage />} />
         <Route path="/contactUs" element={<ContactUS />} />
         <Route path="/kitchen" element={<Kitchen />} />
         <Route path="/orders" element={<Orders />} />

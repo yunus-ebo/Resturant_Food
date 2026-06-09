@@ -10,7 +10,7 @@ import img9 from '../assets/images/pizza1.jpg'
 
 export const navLinks = [
     {slug:"",label:"الصفحة الرئيسية",noBorder:true},
-    {slug:"western-meals",label:"وجبات غربية",images:[
+    {slug:"western-meals",label:"وجبات غربية",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -21,7 +21,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"seafood",label:"مأكولات بحرية",images:[
+    {slug:"seafood",label:"مأكولات بحرية",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -32,7 +32,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"grill-food",label:"مشاوي",images:[
+    {slug:"grill-food",label:"مشاوي",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -43,7 +43,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"pottery",label:"فخارات",images:[
+    {slug:"pottery",label:"فخارات",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -54,7 +54,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ],noBorder:true},
-    {slug:"pizza",label:"بيتزا",images:[
+    {slug:"pizza",label:"بيتزا",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -65,7 +65,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"cold-snacks",label:"مقبلات باردة",images:[
+    {slug:"cold-snacks",label:"مقبلات باردة",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -76,7 +76,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"hot-snacks",label:"مقبلات ساخنة",images:[
+    {slug:"hot-snacks",label:"مقبلات ساخنة",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -87,7 +87,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"soup",label:"شوربات",images:[
+    {slug:"soup",label:"شوربات",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},
@@ -98,7 +98,7 @@ export const navLinks = [
         {id:8,title:"m ipsum dolor sit amet.",image:img8,category:"item2", price:27},
         {id:9,title:"t ipsum dolor sit amet.",image:img9,category:"item2", price:30},
     ]},
-    {slug:"salad",label:"سلطات",images:[
+    {slug:"salad",label:"سلطات",gallery:[
         {id:1,title:"ipsum dolor sit amet.",image:img1,category:"item1", price:43},
         {id:2,title:"Lorem dolor sit amet.",image:img2,category:"item1", price:18},
         {id:3,title:"dolor sit amet.",image:img3,category:"item1", price:28},

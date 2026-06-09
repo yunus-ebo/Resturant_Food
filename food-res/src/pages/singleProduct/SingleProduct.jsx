@@ -30,14 +30,14 @@ const SingleProduct = () => {
   return (
     <div className="singleProductContainer">
       <div className="single-img">
-        <img src={imageUrI(productItem?.images[imageIndex])} alt="" />
+        <img src={imageUrI(productItem?.images[imageIndex].image)} alt="" />
       </div>
       <div className="single-different-imgs">
         {productItem?.images.map((source, index) => (
           <div className="single-img-span">
             <img
               key={index}
-              src={imageUrI(source)}
+              src={imageUrI(source?.image)}
               onClick={() => setImageIndex(index)}
             />
             <p>انقر لترى الصورة كاملة</p>
@@ -50,3 +50,13 @@ const SingleProduct = () => {
   );
 };
 export default SingleProduct;
+
+/*
+INFO:
+--when images is object do that: productItem?.images[imageIndex].image,
+it will be images[0].image
+it will be images[1].image
+not that productItem?.images[imageIndex.image]
+
+
+*/ 

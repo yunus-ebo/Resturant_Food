@@ -48,7 +48,7 @@ const MultipleDishes = () => {
         <ul className="multi-wrapper">
           {iconsCarousel.map((mult) => (
             <li className="multiple-image" key={mult._id}>
-              <Link className="multi-link" to={`/mealsPage`}>
+              <Link className="multi-link" to={`/mealsPage/${mult.slug}`}>
                 <img src={imageUrI(mult.icon)} alt="" />
                 <p>{mult.title}</p>
               </Link>
