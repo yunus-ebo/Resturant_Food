@@ -1,25 +1,34 @@
-
 .dishes_datas {
+  margin-top: 25px;
   display: grid;
-  justify-self: center;
-  width: 80%;
-  margin-top: 15px;
+  padding: 0 10px;
+}
+.dish_data {
+  display: flex;
+  height: 150px;
+  box-shadow: 3px 2px 6px #adadad;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.dish-img img {
+  height: 100%;
+}
+.dish-texts {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  /* white-space: pre-line; */
 }
 
-.dish-img img {
-  width: 100%;
-  height: 80px;
-}
-.meals-item {
-  text-align: center;
-  margin-top: 20px;
-}
 @media (max-width: 388px) {
   .dishes_datas {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 15px;
   }
   .dish_data {
     text-align: center;
   }
+  .dish-img img {
+  width: 120px;
+}
 }

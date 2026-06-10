@@ -26,14 +26,19 @@ const MealsPage = () => {
             <div className="dish-img">
               <img src={imageUrI(dish.image)} alt="" />
             </div>
-            <p>{dish.item}</p>
-            <div >
-              <CartPlus />
+            <div className="dish-texts">
+              <h2>{dish.item}</h2>
+              <div>
+                <span>{dish.description}</span>
+              </div>
+              {/* <div className="cartPlus-icon">
+                <i class="fa-solid fa-cart-plus"></i>
+              </div> */}
             </div>
           </div>
         ))}
       </div>
-      <div className="meals-item">hello different meals</div>
+      {/* <div className="meals-item">hello different meals</div> */}
     </div>
   );
 };
