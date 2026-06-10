@@ -1,34 +1,68 @@
+.dishes_title {
+  text-align: center;
+  font-family: var(--fontFamily-Tajawal);
+  margin-top: 20px;
+}
 .dishes_datas {
   margin-top: 25px;
+  margin-bottom: 35px;
   display: grid;
+  gap: 20px;
   padding: 0 10px;
 }
 .dish_data {
+  position: relative;
   display: flex;
   height: 150px;
-  box-shadow: 3px 2px 6px #adadad;
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  box-shadow: 3px 2px 10px #adadad9e;
+  border-radius: 8px;
 }
 .dish-img img {
   height: 100%;
+  width: 160px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 .dish-texts {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  /* white-space: pre-line; */
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
 }
-
+.dish_data:hover {
+  background-color: #fdf9f0;
+}
+.dish-texts h2 {
+  font-family: var(--fontFamily-Messiri);
+}
+.dish_description span {
+  white-space: pre-line;
+  font-family: var(--fontFamily-amiri);
+}
+.dish-button{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: var(--iconsColor);
+  font-family: var(--fontFamily-Tajawal);
+  font-weight: 500;
+}
 @media (max-width: 388px) {
   .dishes_datas {
     grid-template-columns: repeat(1, 1fr);
-    gap: 15px;
   }
   .dish_data {
     text-align: center;
   }
   .dish-img img {
-  width: 120px;
-}
+    width: 120px;
+  }
+  .dish-button {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 5px 10px;
+  }
 }

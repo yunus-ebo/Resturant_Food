@@ -20,6 +20,7 @@ const MealsPage = () => {
   }, []);
   return (
     <div className="mealsContainer">
+      <h2 className="dishes_title"> وصفات أكل( ) </h2>
       <div className="dishes_datas">
         {mainDishes?.map((dish) => (
           <div className="dish_data">
@@ -28,9 +29,10 @@ const MealsPage = () => {
             </div>
             <div className="dish-texts">
               <h2>{dish.item}</h2>
-              <div>
+              <div className="dish_description">
                 <span>{dish.description}</span>
               </div>
+              <button className="dish-button"> اضغط <i class="bi bi-arrow-left-short"></i> </button>
               {/* <div className="cartPlus-icon">
                 <i class="fa-solid fa-cart-plus"></i>
               </div> */}

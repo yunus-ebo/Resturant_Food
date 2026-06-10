@@ -76,7 +76,7 @@
 .candy_img img {
   border-radius: 50%;
 }
-@media (max-width: 386px) {
+@media (max-width: 388px) {
   .candy_descrip {
     min-height: 80px;
     white-space: pre-line;
