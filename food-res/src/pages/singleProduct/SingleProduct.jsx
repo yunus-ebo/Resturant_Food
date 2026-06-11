@@ -11,7 +11,7 @@ const SingleProduct = () => {
   const { productItem } = useSelector((state) => state.product);
   const { id } = useParams();
   const [imageIndex, setImageIndex] = useState(0);
-  const [qty,setQty] = useState(1);
+  const [qty, setQty] = useState(1);
   useEffect(() => {
     dispatch(fetchProductById(id));
     window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ const SingleProduct = () => {
   const addToOrdersHandler = () => {
     dispatch(
       addItemToOrders({
-        _id: productItem?._id, 
+        _id: productItem?._id,
         image: productItem?.image,
         images: productItem?.images[imageIndex],
         description: productItem?.description,
@@ -32,20 +32,26 @@ const SingleProduct = () => {
       <div className="single-img">
         <img src={imageUrI(productItem?.images[imageIndex].image)} alt="" />
       </div>
-      <div className="single-different-imgs">
-        {productItem?.images.map((source, index) => (
-          <div className="single-img-span">
-            <img
-              key={index}
-              src={imageUrI(source?.image)}
-              onClick={() => setImageIndex(index)}
-            />
-            <p>انقر لترى الصورة كاملة</p>
-          </div>
-        ))}
+      <div className="single_others">
+        <div className="single-different-imgs">
+          {productItem?.images.map((source, index) => (
+            <div className="single-img-span">
+              <img
+                key={index}
+                src={imageUrI(source?.image)}
+                onClick={() => setImageIndex(index)}
+              />
+              <p>انقر لترى الصورة بشكل أفضل</p>
+            </div>
+          ))}
+        </div>
+        <p className="single_description">{productItem?.description}</p>
+        <div className="singleProduct_button">
+          <button onClick={addToOrdersHandler}>
+            أضف لسلة طلباتك <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
       </div>
-      <p className="descrip">{productItem?.description}</p>
-      <button onClick={addToOrdersHandler}> أضف لسلة طلباتك </button>
     </div>
   );
 };
@@ -58,5 +64,4 @@ it will be images[0].image
 it will be images[1].image
 not that productItem?.images[imageIndex.image]
 
-
-*/ 
+*/

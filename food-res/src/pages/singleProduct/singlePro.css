@@ -1,6 +1,7 @@
 .singleProductContainer {
   display: grid;
   row-gap: 20px;
+  color: var(--newColorText);
 }
 .single-img {
   height: 200px;
@@ -9,24 +10,60 @@
   width: 100%;
   height: 100%;
 }
-.singleProductContainer .descrip {
+.single_others {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.single_others .single_description {
   font-family: var(--fontFamily-amiri);
-  justify-self: center;
+  text-align: center;
 }
 .single-different-imgs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
   justify-self: center;
-  gap: 10px;
+  /* gap: 18px; */
 }
-.single-img-span{
-    width: 50px;
-    text-align: center;
+.single-img-span {
+  text-align: center;
 }
-.single-img-span img {
-  width: 50px;
-  height: 50px;
+/* .single-img-span p {
+  font-size: 11px;
+} */
+.singleProduct_button {
+  display: flex;
+  justify-content: center;
 }
-.single-img-span p{
-    font-size: 11px;
+.singleProduct_button button {
+  background: none;
+  border: none;
+  outline: none;
+  background-color: var(--border-color);
+  padding: 6px;
+  border-radius: 6px;
+  margin-top: 10px;
+  font-family: var(--fontFamily-Tajawal);
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--newColorText);
+}
+.singleProduct_button button i{
+  color: var(--footer-back);
+
+}
+@media (max-width: 388px) {
+  .single-different-imgs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .single-img-span p {
+    font-size: 14px;
+    font-family: var(--fontFamily-amiri);
+  }
+  .single-img-span img {
+    width: 100%;
+    height: 70px;
+  }
 }
