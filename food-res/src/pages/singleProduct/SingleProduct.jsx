@@ -21,7 +21,7 @@ const SingleProduct = () => {
       addItemToOrders({
         _id: productItem?._id,
         image: productItem?.image,
-        images: productItem?.images[imageIndex],
+        images: productItem?.images,
         description: productItem?.description,
         price: productItem?.price,
       }),
@@ -30,7 +30,7 @@ const SingleProduct = () => {
   return (
     <div className="singleProductContainer">
       <div className="single-img">
-        <img src={imageUrI(productItem?.images[imageIndex].image)} alt="" />
+        <img src={imageUrI(productItem?.images[imageIndex]?.image)} alt="" />
       </div>
       <div className="single_others">
         <div className="single-different-imgs">
@@ -46,10 +46,9 @@ const SingleProduct = () => {
           ))}
         </div>
         <p className="single_description">{productItem?.description}</p>
-        <div className="singleProduct_button">
-          <button onClick={addToOrdersHandler}>
-            أضف لسلة طلباتك <i class="fa-solid fa-cart-plus"></i>
-          </button>
+        <div onClick={addToOrdersHandler} className="singleProduct_button">
+          <span> أضف لسلة طلباتك  </span>
+            <i class="fa-solid fa-cart-plus cart_plus"></i>
         </div>
       </div>
     </div>
