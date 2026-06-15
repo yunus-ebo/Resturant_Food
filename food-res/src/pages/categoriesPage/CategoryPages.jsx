@@ -23,8 +23,7 @@ const CategoryPages = () => {
         <ul className="categoryPage-ul">
           {productItem?.descriptions.map((product) => (
             <li>
-              {" "}
-              <span className="dash">-</span> {product}
+              <span className="cate-dash">-</span> {product}
             </li>
           ))}
         </ul>

@@ -19,7 +19,7 @@ export function fetchProductById(byId){
       const data = await response.json();
       dispatch(productAction.setProduct(data))
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
 }
