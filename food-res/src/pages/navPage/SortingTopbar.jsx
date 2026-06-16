@@ -13,11 +13,11 @@ const SortingTopbar = ({selected, setSelected}) => {
       </div>
        <div>
         <input type="radio" name="sort" id="highPrice" value="" onChange={onChangeHandler} checked={selected === "highPrice"}/>
-        <label htmlFor="noSort"> الأعلى </label>
+        <label htmlFor="noSort"> سعرأعلى </label>
       </div>
        <div>
         <input type="radio" name="sort" id="lowPrice" value="" onChange={onChangeHandler} checked={selected === "lowPrice"}/>
-        <label htmlFor="noSort"> الأقل </label>
+        <label htmlFor="noSort"> سعر أقل </label>
       </div>
     </div>
   )
