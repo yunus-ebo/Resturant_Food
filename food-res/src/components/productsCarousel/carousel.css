@@ -52,7 +52,7 @@
 /* swiper end */
 
 /* Media Query */
-@media (max-width: 386px) {
+@media (max-width: 388px) {
   .right-swiper,
   .left-swiper {
     font-size: 21px;

@@ -49,7 +49,7 @@
   display: block;
 }
 
-@media (max-width: 386px) {
+@media (max-width: 388px) {
   .categories {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;

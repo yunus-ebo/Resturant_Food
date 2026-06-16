@@ -26,7 +26,7 @@
 .right-arrow {
   z-index: 600;
 }
-@media (max-width: 426px){
+@media (max-width: 388px){
   .bannerContainer {
     width: 100%;
   }
@@ -37,13 +37,6 @@
     padding: 5px;
   }
 }
-@media (max-width: 386px) {
-  .right-arrow,
-  .left-arrow {
-    font-size: 20px;
-    }
-}
-
 @media (max-width: 320px) {
   .right-arrow,
   .left-arrow {

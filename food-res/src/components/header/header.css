@@ -169,7 +169,7 @@ nav .navbar-ul li :hover {
   }
 }
 
-@media (max-width: 386px) {
+@media (max-width: 388px) {
   .top-rightSection {
     grid-template-areas: "iconCart iconUser iconSearch";
   }

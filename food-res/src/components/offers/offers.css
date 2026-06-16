@@ -135,7 +135,7 @@
   background-color: var(--iconsColor);
 }
 
-@media (max-width: 386px) {
+@media (max-width: 388px) {
   .offersCarouselContainer {
     display: grid;
     gap: 5px;
