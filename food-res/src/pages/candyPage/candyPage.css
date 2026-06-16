@@ -3,8 +3,8 @@
 }
 
 .candyPage-img img {
-  width: 100%;
-  height: 300px;
+  /* width: 100%; */
+  /* height: 300px; */
 }
 .candyPage-texts {
   padding-right: 18px;
@@ -22,13 +22,13 @@
 .candyPage-ul li .candy-dash {
   color: red;
   font-weight: 500;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 .candyPage-cart {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  /* width: 70%; */
   margin: auto;
   padding: 6px;
   box-shadow: 0 0 8px 0 #dbdadab9;
@@ -41,4 +41,17 @@
 }
 .candyPage-cart:hover {
   background-color: #fbf9f5d9;
+}
+@media (max-width: 388px) {
+  .candyPage-img img {
+    width: 100%;
+    height: 300px;
+  }
+  .candyPage-ul li .candy-dash {
+    font-size: 20px;
+  }
+  .candyPage-cart {
+    width: 70%;
+    padding: 6px;
+  }
 }

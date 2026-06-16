@@ -69,3 +69,6 @@ li{
   padding: 0 20px;
   overflow-x: hidden;
 }
+.cart_plus {
+  color: var(--text-back);
+}
