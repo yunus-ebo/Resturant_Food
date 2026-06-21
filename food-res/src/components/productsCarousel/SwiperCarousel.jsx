@@ -41,7 +41,8 @@ const SwiperCarousel = () => {
         onTouchEnd={handleSwipTouchEnd}
       >
         {swiperImages.map((swip) => (
-          <Link className="swiperSlide" to={`/singleProduct/${swip._id}`}>
+          <Link onClick={() => scrollTo(0,0)}
+           className="swiperSlide" to={`/singleProduct/${swip._id}`}>
               <img
                 src={imageUrI(swip.image)}
                 alt=""

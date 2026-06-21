@@ -14,7 +14,6 @@ const SingleProduct = () => {
   const [qty, setQty] = useState(1);
   useEffect(() => {
     dispatch(fetchProductById(id));
-    window.scrollTo(0, 0);
   }, [id]);
   const addToOrdersHandler = () => {
     dispatch(
