@@ -9,7 +9,7 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
   const { productItems } = useSelector((state) => state.product);
 
-  const logo = productItems.find((product) => product.category == "logo");
+  const logo = productItems.find((product) => product.category === "logo");
 
   return (
     <header>
@@ -26,7 +26,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="top-middleSection">
-            <img className="logo-header" src={imageUrI(logo.image)} alt="" />
+            <img className="logo-header" src={imageUrI(logo?.image)} alt="" />
         </div>
         <div className={`top-leftSection ${toggle && "open"}`}>
           <div className="icon-closeLeft" onClick={() => setToggle(false)}>
